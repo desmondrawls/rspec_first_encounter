@@ -15,9 +15,8 @@ class ResearchItemsController < ApplicationController
 			end
 		end
 
-		respond_to do |format|
-			format.js
-		end
+		#added for simplification purposes...
+		render :nothing => true
 	end
 
 private
