@@ -1,4 +1,6 @@
 BackEndChallenge::Application.routes.draw do
+  resources :ideas
+
   resources :quick_ideas
 
   # The priority is based upon order of creation: first created -> highest priority.
