@@ -11,7 +11,7 @@ Thanks for your interest in SumZero and welcome to our Back-end Challenge! To ki
 ## Challenge 1: Refactor research_items_controller.rb#create
 You have been given legacy code without tests which you must clean up:
 
-1. Write controller tests to cover all paths through the create action. The ResearchedItem model is simple so all you need to do is call Model.create! to set up a model (no factories required).
+1. Write controller tests to cover all paths through the create action. The ResearchedItem model is simple so all you need to do is call Model.create! to set up a model (no factories required). You may stub BloombergResearch.find_by_id().
 2. Refactor the action, pushing responsibilities into the model and/or any service classes you feel appropriate (you may create any additional classes as you deem necessary)
 3. Refactor your tests (commenting out those which are now irrelevant so we can see them) to match the new division of labor (creating new model/service test classes where appropriate)
 
