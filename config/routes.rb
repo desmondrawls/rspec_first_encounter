@@ -1,4 +1,6 @@
 BackEndChallenge::Application.routes.draw do
+  resources :comments
+
   resources :ideas
 
   resources :quick_ideas
