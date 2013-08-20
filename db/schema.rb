@@ -11,11 +11,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130820152427) do
+ActiveRecord::Schema.define(version: 20130820153023) do
 
   create_table "comments", force: true do |t|
     t.integer  "user_id"
     t.string   "text"
+    t.integer  "commentable_id"
+    t.string   "commentable_type"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -31,6 +33,12 @@ ActiveRecord::Schema.define(version: 20130820152427) do
   create_table "quick_ideas", force: true do |t|
     t.string   "text"
     t.integer  "user_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "users", force: true do |t|
+    t.string   "name"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
