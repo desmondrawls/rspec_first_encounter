@@ -1,4 +1,6 @@
 BackEndChallenge::Application.routes.draw do
+  resources :research_items
+
   resources :users
 
   resources :comments
