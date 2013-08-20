@@ -11,9 +11,9 @@ Thanks for your interest in SumZero and welcome to our Back-end Challenge! To ki
 ## Challenge 1: Refactor research_items_controller.rb#create
 You have been given legacy code without tests which you must clean up:
 
-1. Write controller tests to cover all paths through the create action. (Note, we haven't provided any model code, so stub out models (with rspec) in your tests as necessary).
-2. Refactor the action, pushing responsibilities into the models and/or any service classes you feel appropriate (you may create any additional classes as you deem necessary)
-3. Refactor your tests to match the new division of labor (creating new model/service test classes where appropriate)
+1. Write controller tests to cover all paths through the create action. The ResearchedItem model is simple so all you need to do is call Model.create! to set up a model (no factories required).
+2. Refactor the action, pushing responsibilities into the model and/or any service classes you feel appropriate (you may create any additional classes as you deem necessary)
+3. Refactor your tests (commenting out those which are now irrelevant so we can see them) to match the new division of labor (creating new model/service test classes where appropriate)
 
 Your final set of tests should pass and the overall behavior of the create action should remain unchanged from its initial form.
 
@@ -21,5 +21,5 @@ Your final set of tests should pass and the overall behavior of the create actio
 Imagine you need to allow users to flag three different kinds of items on SumZero (comments, ideas, and quick ideas). You want to develop a common module that is shared with each model to keep things DRY.
 
 1. Database Design. We've created a simple schema to get you started. You'll need to create a migration which embodies your design decisions, e.g., how will you record when an item has been flagged?
-2. Module logic. Create the necessary interface for the view layer interact with your module. Hint: What will the view layer need to know, and how will it interact with your module? Hint: You'll probably want a "flag_item!" method as well as a "flagged?" method.
-3. Tests. Write tests for your module (if you didn't already in step 2)
+2. Module logic. Create the necessary interface for the view layer interact with your module. Hint: What will the view layer need to know, and how will it interact with your module? You'll probably want a "flag_item!" method as well as a "flagged?" method.
+3. Tests. Write tests for your module (if you didn't already in step 2).
