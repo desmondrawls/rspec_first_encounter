@@ -1,4 +1,6 @@
 BackEndChallenge::Application.routes.draw do
+  devise_for :users
+  
   resources :research_items
 
   resources :users

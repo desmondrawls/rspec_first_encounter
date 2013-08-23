@@ -21,5 +21,5 @@ Your final set of tests should pass and the overall behavior of the create actio
 Imagine you need to allow users to flag three different kinds of items on SumZero (comments, ideas, and quick ideas). You want to develop a common module that is shared with each model to keep things DRY.
 
 1. Database Design. We've created a simple schema to get you started. You'll need to create a migration which embodies your design decisions, e.g., how will you record when an item has been flagged?
-2. Module logic. Create the necessary interface for the view layer interact with your module. Hint: What will the view layer need to know, and how will it interact with your module? You'll probably want a "flag_item!" method as well as a "flagged?" method.
+2. Module logic. Create the necessary interface for the view layer to interact with your module. Hint: How will it tell what has been flagged and how will it flag items? You'll probably want a "flag_item!" method as well as a "flagged?" method.
 3. Tests. Write tests for your module (if you didn't already in step 2).
