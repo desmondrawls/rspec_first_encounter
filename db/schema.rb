@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130905145410) do
+ActiveRecord::Schema.define(version: 20130905161551) do
 
   create_table "bloomberg_researches", force: true do |t|
     t.datetime "created_at"
@@ -25,6 +25,7 @@ ActiveRecord::Schema.define(version: 20130905145410) do
     t.string   "commentable_type"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.boolean  "flag"
   end
 
   create_table "ideas", force: true do |t|
@@ -34,6 +35,7 @@ ActiveRecord::Schema.define(version: 20130905145410) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "user_id"
+    t.boolean  "flag"
   end
 
   create_table "quick_ideas", force: true do |t|
@@ -41,6 +43,7 @@ ActiveRecord::Schema.define(version: 20130905145410) do
     t.integer  "user_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.boolean  "flag"
   end
 
   create_table "research_items", force: true do |t|
