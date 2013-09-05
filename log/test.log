@@ -590,3 +590,1423 @@ Processing by ResearchItemsController#create as HTML
 Completed 200 OK in 1ms (Views: 0.8ms | ActiveRecord: 0.0ms)
   [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "research_items" WHERE "research_items"."user_id" = ?[0m  [["user_id", 1]]
   [1m[35m (0.5ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT 1 AS one FROM "users" WHERE "users"."email" = 'example@example.com' LIMIT 1
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[36mSQL (9.3ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "encrypted_password", "updated_at") VALUES (?, ?, ?, ?)[0m  [["created_at", Thu, 05 Sep 2013 14:51:34 UTC +00:00], ["email", "example@example.com"], ["encrypted_password", "$2a$04$n8hAOo.psJnaJCbEmU.nOehNRaJC9ZNlve/ebLog7wAjv0rYCLRrK"], ["updated_at", Thu, 05 Sep 2013 14:51:34 UTC +00:00]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "research_items" ("created_at", "updated_at") VALUES (?, ?)  [["created_at", Thu, 05 Sep 2013 14:51:34 UTC +00:00], ["updated_at", Thu, 05 Sep 2013 14:51:34 UTC +00:00]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by ResearchItemsController#create as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mResearchItem Load (0.1ms)[0m  SELECT "research_items".* FROM "research_items" WHERE "research_items"."id" = 1 LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "research_items" SET "user_id" = ?, "updated_at" = ? WHERE "research_items"."id" = 1[0m  [["user_id", 1], ["updated_at", Thu, 05 Sep 2013 14:51:34 UTC +00:00]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  Rendered research_items/new.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 34ms (Views: 10.4ms | ActiveRecord: 0.9ms)
+  [1m[36m (0.5ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT 1 AS one FROM "users" WHERE "users"."email" = 'example@example.com' LIMIT 1
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "encrypted_password", "updated_at") VALUES (?, ?, ?, ?)[0m  [["created_at", Thu, 05 Sep 2013 14:51:34 UTC +00:00], ["email", "example@example.com"], ["encrypted_password", "$2a$04$xogpMEcpk1bWwIE0ZDoZBuwdhOxs3JwAYaYHY7nOZisLTvlUVlg1."], ["updated_at", Thu, 05 Sep 2013 14:51:34 UTC +00:00]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "research_items" ("created_at", "updated_at") VALUES (?, ?)  [["created_at", Thu, 05 Sep 2013 14:51:34 UTC +00:00], ["updated_at", Thu, 05 Sep 2013 14:51:34 UTC +00:00]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.5ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE "users"."email" = 'example@example.com' LIMIT 1[0m
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "users" ("created_at", "email", "encrypted_password", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", Thu, 05 Sep 2013 14:51:34 UTC +00:00], ["email", "example@example.com"], ["encrypted_password", "$2a$04$BJO4X8Xa5a4hv9oyfdzio.3Up.TDBV7t7MiL7N1XHUo6aHOusewNu"], ["updated_at", Thu, 05 Sep 2013 14:51:34 UTC +00:00]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "research_items" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", Thu, 05 Sep 2013 14:51:34 UTC +00:00], ["updated_at", Thu, 05 Sep 2013 14:51:34 UTC +00:00]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.5ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT 1 AS one FROM "users" WHERE "users"."email" = 'example@example.com' LIMIT 1
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "encrypted_password", "updated_at") VALUES (?, ?, ?, ?)[0m  [["created_at", Thu, 05 Sep 2013 14:51:34 UTC +00:00], ["email", "example@example.com"], ["encrypted_password", "$2a$04$ARXh4wTff5/Brrh3hYwnCe4kc4NRsFC4CPkfh.Ax4bBnyGoWKV7ZW"], ["updated_at", Thu, 05 Sep 2013 14:51:34 UTC +00:00]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "research_items" ("created_at", "updated_at") VALUES (?, ?)  [["created_at", Thu, 05 Sep 2013 14:51:34 UTC +00:00], ["updated_at", Thu, 05 Sep 2013 14:51:34 UTC +00:00]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by ResearchItemsController#create as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mResearchItem Load (0.1ms)[0m  SELECT "research_items".* FROM "research_items" WHERE "research_items"."id" = 1 LIMIT 1
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "research_items" SET "user_id" = ?, "updated_at" = ? WHERE "research_items"."id" = 1[0m  [["user_id", 1], ["updated_at", Thu, 05 Sep 2013 14:51:34 UTC +00:00]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Completed 200 OK in 7ms (Views: 1.1ms | ActiveRecord: 0.7ms)
+  [1m[36m (0.4ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT 1 AS one FROM "users" WHERE "users"."email" = 'example@example.com' LIMIT 1
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "encrypted_password", "updated_at") VALUES (?, ?, ?, ?)[0m  [["created_at", Thu, 05 Sep 2013 14:51:34 UTC +00:00], ["email", "example@example.com"], ["encrypted_password", "$2a$04$1q59pDq8XvRAhwVl6z5p3ul8vAdpOfpfdPaU4LQJiQptR3mIlp/2O"], ["updated_at", Thu, 05 Sep 2013 14:51:34 UTC +00:00]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "research_items" WHERE "research_items"."user_id" = ?[0m  [["user_id", 1]]
+Processing by ResearchItemsController#create as HTML
+  Parameters: {"id"=>nil}
+Completed 200 OK in 1ms (Views: 0.9ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "research_items" WHERE "research_items"."user_id" = ?  [["user_id", 1]]
+  [1m[36m (0.4ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT 1 AS one FROM "users" WHERE "users"."email" = 'example@example.com' LIMIT 1
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[36mSQL (7.6ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "encrypted_password", "updated_at") VALUES (?, ?, ?, ?)[0m  [["created_at", Thu, 05 Sep 2013 14:51:54 UTC +00:00], ["email", "example@example.com"], ["encrypted_password", "$2a$04$VlOr/LHeOqY36zlbXjVD7u5poIORBMMBo0Q4UUPg1twGgAxwFZxr6"], ["updated_at", Thu, 05 Sep 2013 14:51:54 UTC +00:00]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "research_items" WHERE "research_items"."user_id" = ?[0m  [["user_id", 1]]
+Processing by ResearchItemsController#create as HTML
+  Parameters: {"id"=>nil}
+  Rendered research_items/new.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 10ms (Views: 10.1ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "research_items" WHERE "research_items"."user_id" = ?  [["user_id", 1]]
+  [1m[36m (0.8ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT 1 AS one FROM "users" WHERE "users"."email" = 'example@example.com' LIMIT 1
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "encrypted_password", "updated_at") VALUES (?, ?, ?, ?)[0m  [["created_at", Thu, 05 Sep 2013 14:51:54 UTC +00:00], ["email", "example@example.com"], ["encrypted_password", "$2a$04$UK5c04GwHyRazB0Q90AHv.0NI3/iTFr2r68.VdN1VyNO84LCR.PlW"], ["updated_at", Thu, 05 Sep 2013 14:51:54 UTC +00:00]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.8ms)[0m  INSERT INTO "research_items" ("created_at", "updated_at") VALUES (?, ?)  [["created_at", Thu, 05 Sep 2013 14:51:54 UTC +00:00], ["updated_at", Thu, 05 Sep 2013 14:51:54 UTC +00:00]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.6ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE "users"."email" = 'example@example.com' LIMIT 1[0m
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "users" ("created_at", "email", "encrypted_password", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", Thu, 05 Sep 2013 14:51:54 UTC +00:00], ["email", "example@example.com"], ["encrypted_password", "$2a$04$Gra8zhaGleWWKNQqZcceP.uiktzrQJqUtZKDc3jKCgYM4lQA1dYGS"], ["updated_at", Thu, 05 Sep 2013 14:51:54 UTC +00:00]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "research_items" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", Thu, 05 Sep 2013 14:51:54 UTC +00:00], ["updated_at", Thu, 05 Sep 2013 14:51:54 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by ResearchItemsController#create as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mResearchItem Load (0.1ms)[0m  [1mSELECT "research_items".* FROM "research_items" WHERE "research_items"."id" = 1 LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "research_items" SET "user_id" = ?, "updated_at" = ? WHERE "research_items"."id" = 1  [["user_id", 1], ["updated_at", Thu, 05 Sep 2013 14:51:55 UTC +00:00]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Completed 200 OK in 38ms (Views: 1.1ms | ActiveRecord: 1.0ms)
+  [1m[35m (0.5ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE "users"."email" = 'example@example.com' LIMIT 1[0m
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "users" ("created_at", "email", "encrypted_password", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", Thu, 05 Sep 2013 14:51:55 UTC +00:00], ["email", "example@example.com"], ["encrypted_password", "$2a$04$E4.wVg4DixwP4vp5FAv/D.Qa2nagMJjJYwxX1bJRK/hEvgB12PBmm"], ["updated_at", Thu, 05 Sep 2013 14:51:55 UTC +00:00]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "research_items" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", Thu, 05 Sep 2013 14:51:55 UTC +00:00], ["updated_at", Thu, 05 Sep 2013 14:51:55 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by ResearchItemsController#create as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mResearchItem Load (0.1ms)[0m  [1mSELECT "research_items".* FROM "research_items" WHERE "research_items"."id" = 1 LIMIT 1[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "research_items" SET "user_id" = ?, "updated_at" = ? WHERE "research_items"."id" = 1  [["user_id", 1], ["updated_at", Thu, 05 Sep 2013 14:51:55 UTC +00:00]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Completed 200 OK in 5ms (Views: 0.8ms | ActiveRecord: 0.5ms)
+  [1m[35m (0.6ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE "users"."email" = 'example@example.com' LIMIT 1[0m
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "users" ("created_at", "email", "encrypted_password", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", Thu, 05 Sep 2013 14:51:55 UTC +00:00], ["email", "example@example.com"], ["encrypted_password", "$2a$04$NfjwrfsFWx1wvt7fexWebeLTsIoegSFADTIoudJT4oJ51ble9M4bi"], ["updated_at", Thu, 05 Sep 2013 14:51:55 UTC +00:00]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "research_items" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", Thu, 05 Sep 2013 14:51:55 UTC +00:00], ["updated_at", Thu, 05 Sep 2013 14:51:55 UTC +00:00]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by ResearchItemsController#create as HTML
+  Parameters: {"id"=>"0"}
+  [1m[36mResearchItem Load (0.1ms)[0m  [1mSELECT "research_items".* FROM "research_items" WHERE "research_items"."id" = 0 LIMIT 1[0m
+Completed 500 Internal Server Error in 5ms
+  [1m[35m (0.5ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT 1 AS one FROM "users" WHERE "users"."email" = 'example@example.com' LIMIT 1
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[36mSQL (6.6ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "encrypted_password", "updated_at") VALUES (?, ?, ?, ?)[0m  [["created_at", Thu, 05 Sep 2013 14:52:36 UTC +00:00], ["email", "example@example.com"], ["encrypted_password", "$2a$04$3ds7jlLKH/Qd6I7qnmOXOuaISXEeEVIzaAbL/ISSlKqmBdDtsw/Z2"], ["updated_at", Thu, 05 Sep 2013 14:52:36 UTC +00:00]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "research_items" WHERE "research_items"."user_id" = ?[0m  [["user_id", 1]]
+Processing by ResearchItemsController#create as HTML
+  Parameters: {"id"=>nil}
+  Rendered research_items/new.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 15ms (Views: 14.5ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "research_items" WHERE "research_items"."user_id" = ?  [["user_id", 1]]
+  [1m[36m (1.7ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT 1 AS one FROM "users" WHERE "users"."email" = 'example@example.com' LIMIT 1
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "encrypted_password", "updated_at") VALUES (?, ?, ?, ?)[0m  [["created_at", Thu, 05 Sep 2013 14:52:36 UTC +00:00], ["email", "example@example.com"], ["encrypted_password", "$2a$04$Y80foxoYRQYmU22/wPQ0t.bS8bsDEUTNc9bue42CBp9hu8t//2Fma"], ["updated_at", Thu, 05 Sep 2013 14:52:36 UTC +00:00]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "research_items" ("created_at", "updated_at") VALUES (?, ?)  [["created_at", Thu, 05 Sep 2013 14:52:36 UTC +00:00], ["updated_at", Thu, 05 Sep 2013 14:52:36 UTC +00:00]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.9ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE "users"."email" = 'example@example.com' LIMIT 1[0m
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "users" ("created_at", "email", "encrypted_password", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", Thu, 05 Sep 2013 14:52:36 UTC +00:00], ["email", "example@example.com"], ["encrypted_password", "$2a$04$/tAQR5FrzRGUdrcywaFdtuF32xvbeJGeZl1lGkDsYFVMBPKlbw0Ve"], ["updated_at", Thu, 05 Sep 2013 14:52:36 UTC +00:00]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "research_items" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", Thu, 05 Sep 2013 14:52:36 UTC +00:00], ["updated_at", Thu, 05 Sep 2013 14:52:36 UTC +00:00]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by ResearchItemsController#create as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mResearchItem Load (0.2ms)[0m  [1mSELECT "research_items".* FROM "research_items" WHERE "research_items"."id" = 1 LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "research_items" SET "user_id" = ?, "updated_at" = ? WHERE "research_items"."id" = 1  [["user_id", 1], ["updated_at", Thu, 05 Sep 2013 14:52:36 UTC +00:00]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Completed 200 OK in 42ms (Views: 1.0ms | ActiveRecord: 1.0ms)
+  [1m[35m (0.4ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE "users"."email" = 'example@example.com' LIMIT 1[0m
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "users" ("created_at", "email", "encrypted_password", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", Thu, 05 Sep 2013 14:52:36 UTC +00:00], ["email", "example@example.com"], ["encrypted_password", "$2a$04$LEPOPiPYpQoHtcqsnEgeBO6q/an/9HO6x1FKMbqNS50EQIUHRLpNy"], ["updated_at", Thu, 05 Sep 2013 14:52:36 UTC +00:00]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "research_items" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", Thu, 05 Sep 2013 14:52:36 UTC +00:00], ["updated_at", Thu, 05 Sep 2013 14:52:36 UTC +00:00]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by ResearchItemsController#create as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mResearchItem Load (0.1ms)[0m  [1mSELECT "research_items".* FROM "research_items" WHERE "research_items"."id" = 1 LIMIT 1[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "research_items" SET "user_id" = ?, "updated_at" = ? WHERE "research_items"."id" = 1  [["user_id", 1], ["updated_at", Thu, 05 Sep 2013 14:52:36 UTC +00:00]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Completed 200 OK in 5ms (Views: 0.8ms | ActiveRecord: 0.5ms)
+  [1m[35m (0.4ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE "users"."email" = 'example@example.com' LIMIT 1[0m
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "users" ("created_at", "email", "encrypted_password", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", Thu, 05 Sep 2013 14:52:36 UTC +00:00], ["email", "example@example.com"], ["encrypted_password", "$2a$04$wWOorSCVSafsCEMxweK1kOQP7Rmj5u3VjVPudb8FvkgJuCrFzkCZ."], ["updated_at", Thu, 05 Sep 2013 14:52:36 UTC +00:00]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "research_items" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", Thu, 05 Sep 2013 14:52:36 UTC +00:00], ["updated_at", Thu, 05 Sep 2013 14:52:36 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by ResearchItemsController#create as HTML
+  Parameters: {"id"=>"0"}
+  [1m[36mResearchItem Load (0.1ms)[0m  [1mSELECT "research_items".* FROM "research_items" WHERE "research_items"."id" = 0 LIMIT 1[0m
+Completed 500 Internal Server Error in 5ms
+  [1m[35m (0.5ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT 1 AS one FROM "users" WHERE "users"."email" = 'example@example.com' LIMIT 1
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[36mSQL (10.2ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "encrypted_password", "updated_at") VALUES (?, ?, ?, ?)[0m  [["created_at", Thu, 05 Sep 2013 14:53:19 UTC +00:00], ["email", "example@example.com"], ["encrypted_password", "$2a$04$1cV4iNr2iiQcaO7qmQU9VuU79PE0mIPr.ErHTB7/pftJKwwtWnOCG"], ["updated_at", Thu, 05 Sep 2013 14:53:19 UTC +00:00]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "research_items" WHERE "research_items"."user_id" = ?[0m  [["user_id", 1]]
+Processing by ResearchItemsController#create as HTML
+  Parameters: {"id"=>nil}
+  Rendered research_items/new.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 12ms (Views: 12.0ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "research_items" WHERE "research_items"."user_id" = ?  [["user_id", 1]]
+  [1m[36m (0.9ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT 1 AS one FROM "users" WHERE "users"."email" = 'example@example.com' LIMIT 1
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "encrypted_password", "updated_at") VALUES (?, ?, ?, ?)[0m  [["created_at", Thu, 05 Sep 2013 14:53:19 UTC +00:00], ["email", "example@example.com"], ["encrypted_password", "$2a$04$WZpO4NTimY8wJLf/wfL0JOJ6pSrRnwWHsSBrpLTw41WKX/jJDJFMu"], ["updated_at", Thu, 05 Sep 2013 14:53:19 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "research_items" ("created_at", "updated_at") VALUES (?, ?)  [["created_at", Thu, 05 Sep 2013 14:53:19 UTC +00:00], ["updated_at", Thu, 05 Sep 2013 14:53:19 UTC +00:00]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.4ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE "users"."email" = 'example@example.com' LIMIT 1[0m
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "users" ("created_at", "email", "encrypted_password", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", Thu, 05 Sep 2013 14:53:19 UTC +00:00], ["email", "example@example.com"], ["encrypted_password", "$2a$04$DWa7d15sXH8KFq4Y1QL9jOGmTqyAo4Co/EIaJaXzXGPQmz2KIwPeu"], ["updated_at", Thu, 05 Sep 2013 14:53:19 UTC +00:00]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "research_items" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", Thu, 05 Sep 2013 14:53:19 UTC +00:00], ["updated_at", Thu, 05 Sep 2013 14:53:19 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by ResearchItemsController#create as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mResearchItem Load (0.2ms)[0m  [1mSELECT "research_items".* FROM "research_items" WHERE "research_items"."id" = 1 LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  UPDATE "research_items" SET "user_id" = ?, "updated_at" = ? WHERE "research_items"."id" = 1  [["user_id", 1], ["updated_at", Thu, 05 Sep 2013 14:53:19 UTC +00:00]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Completed 200 OK in 40ms (Views: 0.9ms | ActiveRecord: 1.1ms)
+  [1m[35m (0.5ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE "users"."email" = 'example@example.com' LIMIT 1[0m
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "users" ("created_at", "email", "encrypted_password", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", Thu, 05 Sep 2013 14:53:19 UTC +00:00], ["email", "example@example.com"], ["encrypted_password", "$2a$04$mOtlsiAKchfkiFKzyqedm.Fd9eLw.hl1FjxqOswWkS8.2Hf3ahuKy"], ["updated_at", Thu, 05 Sep 2013 14:53:19 UTC +00:00]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "research_items" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", Thu, 05 Sep 2013 14:53:19 UTC +00:00], ["updated_at", Thu, 05 Sep 2013 14:53:19 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by ResearchItemsController#create as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mResearchItem Load (0.1ms)[0m  [1mSELECT "research_items".* FROM "research_items" WHERE "research_items"."id" = 1 LIMIT 1[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "research_items" SET "user_id" = ?, "updated_at" = ? WHERE "research_items"."id" = 1  [["user_id", 1], ["updated_at", Thu, 05 Sep 2013 14:53:19 UTC +00:00]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Completed 200 OK in 6ms (Views: 0.9ms | ActiveRecord: 0.6ms)
+  [1m[35m (0.5ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE "users"."email" = 'example@example.com' LIMIT 1[0m
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "users" ("created_at", "email", "encrypted_password", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", Thu, 05 Sep 2013 14:53:19 UTC +00:00], ["email", "example@example.com"], ["encrypted_password", "$2a$04$VMNExkBQQeGrol.kYlfNvuQXi7zt4qy9J94fqlhAxMJGsggLP0yRO"], ["updated_at", Thu, 05 Sep 2013 14:53:19 UTC +00:00]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "research_items" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", Thu, 05 Sep 2013 14:53:19 UTC +00:00], ["updated_at", Thu, 05 Sep 2013 14:53:19 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by ResearchItemsController#create as HTML
+  Parameters: {"id"=>"0"}
+  [1m[36mResearchItem Load (0.1ms)[0m  [1mSELECT "research_items".* FROM "research_items" WHERE "research_items"."id" = 0 LIMIT 1[0m
+Completed 500 Internal Server Error in 3ms
+  [1m[35m (0.4ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT 1 AS one FROM "users" WHERE "users"."email" = 'example@example.com' LIMIT 1
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[36mSQL (6.4ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "encrypted_password", "updated_at") VALUES (?, ?, ?, ?)[0m  [["created_at", Thu, 05 Sep 2013 14:53:57 UTC +00:00], ["email", "example@example.com"], ["encrypted_password", "$2a$04$OSRgUPJ/31dqMazjVQuzbenmKJpIeHwj37dAJjlGsTkncEmDCSshK"], ["updated_at", Thu, 05 Sep 2013 14:53:57 UTC +00:00]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "research_items" WHERE "research_items"."user_id" = ?[0m  [["user_id", 1]]
+Processing by ResearchItemsController#create as HTML
+  Parameters: {"id"=>nil}
+  Rendered research_items/new.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 11ms (Views: 10.4ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "research_items" WHERE "research_items"."user_id" = ?  [["user_id", 1]]
+  [1m[36m (1.9ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT 1 AS one FROM "users" WHERE "users"."email" = 'example@example.com' LIMIT 1
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "encrypted_password", "updated_at") VALUES (?, ?, ?, ?)[0m  [["created_at", Thu, 05 Sep 2013 14:53:57 UTC +00:00], ["email", "example@example.com"], ["encrypted_password", "$2a$04$0xLCuubwShBK7T2Bc6JKWezW8vW.rpizkv0Bm8ztkxE2UyaQC2.Bq"], ["updated_at", Thu, 05 Sep 2013 14:53:57 UTC +00:00]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "research_items" ("created_at", "updated_at") VALUES (?, ?)  [["created_at", Thu, 05 Sep 2013 14:53:57 UTC +00:00], ["updated_at", Thu, 05 Sep 2013 14:53:57 UTC +00:00]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.4ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE "users"."email" = 'example@example.com' LIMIT 1[0m
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "users" ("created_at", "email", "encrypted_password", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", Thu, 05 Sep 2013 14:53:57 UTC +00:00], ["email", "example@example.com"], ["encrypted_password", "$2a$04$yOD8JETHLv50I2Yy3UCXRelahZihowGRE5VfUUAfGrHN5rYjfi5ey"], ["updated_at", Thu, 05 Sep 2013 14:53:57 UTC +00:00]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "research_items" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", Thu, 05 Sep 2013 14:53:57 UTC +00:00], ["updated_at", Thu, 05 Sep 2013 14:53:57 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by ResearchItemsController#create as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mResearchItem Load (0.2ms)[0m  [1mSELECT "research_items".* FROM "research_items" WHERE "research_items"."id" = 1 LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "research_items" SET "user_id" = ?, "updated_at" = ? WHERE "research_items"."id" = 1  [["user_id", 1], ["updated_at", Thu, 05 Sep 2013 14:53:58 UTC +00:00]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Completed 200 OK in 38ms (Views: 0.9ms | ActiveRecord: 1.0ms)
+  [1m[35m (0.5ms)[0m  rollback transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE "users"."email" = 'example@example.com' LIMIT 1[0m
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "users" ("created_at", "email", "encrypted_password", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", Thu, 05 Sep 2013 14:53:58 UTC +00:00], ["email", "example@example.com"], ["encrypted_password", "$2a$04$y0iwHXIdF2n1IqGYelh4nuRztSFw5Es3jIaSGKtCvQ9yAJNDorFlO"], ["updated_at", Thu, 05 Sep 2013 14:53:58 UTC +00:00]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "research_items" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", Thu, 05 Sep 2013 14:53:58 UTC +00:00], ["updated_at", Thu, 05 Sep 2013 14:53:58 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by ResearchItemsController#create as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mResearchItem Load (0.2ms)[0m  [1mSELECT "research_items".* FROM "research_items" WHERE "research_items"."id" = 1 LIMIT 1[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "research_items" SET "user_id" = ?, "updated_at" = ? WHERE "research_items"."id" = 1  [["user_id", 1], ["updated_at", Thu, 05 Sep 2013 14:53:58 UTC +00:00]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Completed 200 OK in 6ms (Views: 0.8ms | ActiveRecord: 0.6ms)
+  [1m[35m (0.5ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE "users"."email" = 'example@example.com' LIMIT 1[0m
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "users" ("created_at", "email", "encrypted_password", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", Thu, 05 Sep 2013 14:53:58 UTC +00:00], ["email", "example@example.com"], ["encrypted_password", "$2a$04$JKYrTDf71dFdSKn8fSypk.rszJTx4VOMR9Bap62jMg/RVqW.zSmZm"], ["updated_at", Thu, 05 Sep 2013 14:53:58 UTC +00:00]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "research_items" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", Thu, 05 Sep 2013 14:53:58 UTC +00:00], ["updated_at", Thu, 05 Sep 2013 14:53:58 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by ResearchItemsController#create as HTML
+  Parameters: {"id"=>"0"}
+  [1m[36mResearchItem Load (0.2ms)[0m  [1mSELECT "research_items".* FROM "research_items" WHERE "research_items"."id" = 0 LIMIT 1[0m
+Completed 500 Internal Server Error in 5ms
+  [1m[35m (0.5ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT 1 AS one FROM "users" WHERE "users"."email" = 'example@example.com' LIMIT 1
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[36mSQL (8.9ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "encrypted_password", "updated_at") VALUES (?, ?, ?, ?)[0m  [["created_at", Thu, 05 Sep 2013 14:55:05 UTC +00:00], ["email", "example@example.com"], ["encrypted_password", "$2a$04$Mtx5//6uyxy1j90nhR.S4u9cZ9SdVBJdiYshlVbrTjxlzlxEeHYvq"], ["updated_at", Thu, 05 Sep 2013 14:55:05 UTC +00:00]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "research_items" ("created_at", "updated_at") VALUES (?, ?)  [["created_at", Thu, 05 Sep 2013 14:55:06 UTC +00:00], ["updated_at", Thu, 05 Sep 2013 14:55:06 UTC +00:00]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by ResearchItemsController#create as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mResearchItem Load (0.1ms)[0m  SELECT "research_items".* FROM "research_items" WHERE "research_items"."id" = 1 LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "research_items" SET "user_id" = ?, "updated_at" = ? WHERE "research_items"."id" = 1[0m  [["user_id", 1], ["updated_at", Thu, 05 Sep 2013 14:55:06 UTC +00:00]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  Rendered research_items/new.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 39ms (Views: 10.4ms | ActiveRecord: 0.8ms)
+  [1m[36m (0.4ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT 1 AS one FROM "users" WHERE "users"."email" = 'example@example.com' LIMIT 1
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "encrypted_password", "updated_at") VALUES (?, ?, ?, ?)[0m  [["created_at", Thu, 05 Sep 2013 14:55:06 UTC +00:00], ["email", "example@example.com"], ["encrypted_password", "$2a$04$pENbKmzqQG.ml.SrJWLdBOFPbWh/iKsmkDv8pVhiQZUjW6RirfH.S"], ["updated_at", Thu, 05 Sep 2013 14:55:06 UTC +00:00]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "research_items" ("created_at", "updated_at") VALUES (?, ?)  [["created_at", Thu, 05 Sep 2013 14:55:06 UTC +00:00], ["updated_at", Thu, 05 Sep 2013 14:55:06 UTC +00:00]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.4ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE "users"."email" = 'example@example.com' LIMIT 1[0m
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "users" ("created_at", "email", "encrypted_password", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", Thu, 05 Sep 2013 14:55:06 UTC +00:00], ["email", "example@example.com"], ["encrypted_password", "$2a$04$mmuDdlW/oDJpWzf/B.3yNez0/s5WRcHbqMTeVyWZXmimeUpjY9/TW"], ["updated_at", Thu, 05 Sep 2013 14:55:06 UTC +00:00]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "research_items" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", Thu, 05 Sep 2013 14:55:06 UTC +00:00], ["updated_at", Thu, 05 Sep 2013 14:55:06 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by ResearchItemsController#create as HTML
+  Parameters: {"id"=>"0"}
+  [1m[36mResearchItem Load (0.1ms)[0m  [1mSELECT "research_items".* FROM "research_items" WHERE "research_items"."id" = 0 LIMIT 1[0m
+  [1m[35mBloombergResearch Load (0.1ms)[0m  SELECT "bloomberg_researches".* FROM "bloomberg_researches" WHERE "bloomberg_researches"."id" = 0 LIMIT 1
+Completed 200 OK in 4ms (Views: 1.2ms | ActiveRecord: 0.4ms)
+  [1m[36m (0.5ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT 1 AS one FROM "users" WHERE "users"."email" = 'example@example.com' LIMIT 1
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "encrypted_password", "updated_at") VALUES (?, ?, ?, ?)[0m  [["created_at", Thu, 05 Sep 2013 14:55:06 UTC +00:00], ["email", "example@example.com"], ["encrypted_password", "$2a$04$zfwL4NYqTs0oWpyUm7EeKe9afXT0vBLJpZLeAakimTuoOc4VHgj2G"], ["updated_at", Thu, 05 Sep 2013 14:55:06 UTC +00:00]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "research_items" ("created_at", "updated_at") VALUES (?, ?)  [["created_at", Thu, 05 Sep 2013 14:55:06 UTC +00:00], ["updated_at", Thu, 05 Sep 2013 14:55:06 UTC +00:00]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by ResearchItemsController#create as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mResearchItem Load (0.2ms)[0m  SELECT "research_items".* FROM "research_items" WHERE "research_items"."id" = 1 LIMIT 1
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.4ms)[0m  [1mUPDATE "research_items" SET "user_id" = ?, "updated_at" = ? WHERE "research_items"."id" = 1[0m  [["user_id", 1], ["updated_at", Thu, 05 Sep 2013 14:55:06 UTC +00:00]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Completed 200 OK in 9ms (Views: 1.5ms | ActiveRecord: 1.0ms)
+  [1m[36m (0.5ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT 1 AS one FROM "users" WHERE "users"."email" = 'example@example.com' LIMIT 1
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "encrypted_password", "updated_at") VALUES (?, ?, ?, ?)[0m  [["created_at", Thu, 05 Sep 2013 14:55:06 UTC +00:00], ["email", "example@example.com"], ["encrypted_password", "$2a$04$7DWN3Cfi9kxBPn5viMMRBOyH5EyghYTxs8CrD5xXkiDJYFhGj3Osq"], ["updated_at", Thu, 05 Sep 2013 14:55:06 UTC +00:00]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "research_items" WHERE "research_items"."user_id" = ?[0m  [["user_id", 1]]
+Processing by ResearchItemsController#create as HTML
+  Parameters: {"id"=>nil}
+Completed 200 OK in 1ms (Views: 1.0ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "research_items" WHERE "research_items"."user_id" = ?  [["user_id", 1]]
+  [1m[36m (0.4ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT 1 AS one FROM "users" WHERE "users"."email" = 'example@example.com' LIMIT 1
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[36mSQL (6.3ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "encrypted_password", "updated_at") VALUES (?, ?, ?, ?)[0m  [["created_at", Thu, 05 Sep 2013 14:55:31 UTC +00:00], ["email", "example@example.com"], ["encrypted_password", "$2a$04$BzIg52hK8SEAmpccR3DtEOEAZ//TVGQ0vpJ4cEeHdl9npuMGBJPqu"], ["updated_at", Thu, 05 Sep 2013 14:55:31 UTC +00:00]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "research_items" WHERE "research_items"."user_id" = ?[0m  [["user_id", 1]]
+Processing by ResearchItemsController#create as HTML
+  Parameters: {"id"=>nil}
+  Rendered research_items/new.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 19ms (Views: 18.4ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "research_items" WHERE "research_items"."user_id" = ?  [["user_id", 1]]
+  [1m[36m (1.8ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT 1 AS one FROM "users" WHERE "users"."email" = 'example@example.com' LIMIT 1
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "encrypted_password", "updated_at") VALUES (?, ?, ?, ?)[0m  [["created_at", Thu, 05 Sep 2013 14:55:31 UTC +00:00], ["email", "example@example.com"], ["encrypted_password", "$2a$04$J53Uf2MK61kzt1opEglvaOX2ukckZmi9NC8dTZXB/JdcIy8M6lHgC"], ["updated_at", Thu, 05 Sep 2013 14:55:31 UTC +00:00]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.8ms)[0m  INSERT INTO "research_items" ("created_at", "updated_at") VALUES (?, ?)  [["created_at", Thu, 05 Sep 2013 14:55:31 UTC +00:00], ["updated_at", Thu, 05 Sep 2013 14:55:31 UTC +00:00]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.5ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE "users"."email" = 'example@example.com' LIMIT 1[0m
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "users" ("created_at", "email", "encrypted_password", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", Thu, 05 Sep 2013 14:55:31 UTC +00:00], ["email", "example@example.com"], ["encrypted_password", "$2a$04$7V3CPuyHiYHiYJlCT6mkuOe0DezDj0CTLNz4vOnKYQi.ddhOgSxTG"], ["updated_at", Thu, 05 Sep 2013 14:55:31 UTC +00:00]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "research_items" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", Thu, 05 Sep 2013 14:55:31 UTC +00:00], ["updated_at", Thu, 05 Sep 2013 14:55:31 UTC +00:00]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by ResearchItemsController#create as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mResearchItem Load (0.1ms)[0m  [1mSELECT "research_items".* FROM "research_items" WHERE "research_items"."id" = 1 LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "research_items" SET "user_id" = ?, "updated_at" = ? WHERE "research_items"."id" = 1  [["user_id", 1], ["updated_at", Thu, 05 Sep 2013 14:55:31 UTC +00:00]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Completed 200 OK in 11ms (Views: 0.8ms | ActiveRecord: 0.9ms)
+  [1m[35m (0.5ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE "users"."email" = 'example@example.com' LIMIT 1[0m
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "users" ("created_at", "email", "encrypted_password", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", Thu, 05 Sep 2013 14:55:31 UTC +00:00], ["email", "example@example.com"], ["encrypted_password", "$2a$04$gBPX8Vg8ioWveYfDSShJY.yJjFwr9nAIDpNFkpbhDDuF92cJhkqn."], ["updated_at", Thu, 05 Sep 2013 14:55:31 UTC +00:00]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "research_items" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", Thu, 05 Sep 2013 14:55:31 UTC +00:00], ["updated_at", Thu, 05 Sep 2013 14:55:31 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by ResearchItemsController#create as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mResearchItem Load (0.1ms)[0m  [1mSELECT "research_items".* FROM "research_items" WHERE "research_items"."id" = 1 LIMIT 1[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "research_items" SET "user_id" = ?, "updated_at" = ? WHERE "research_items"."id" = 1  [["user_id", 1], ["updated_at", Thu, 05 Sep 2013 14:55:31 UTC +00:00]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Completed 200 OK in 5ms (Views: 0.8ms | ActiveRecord: 0.6ms)
+  [1m[35m (0.4ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE "users"."email" = 'example@example.com' LIMIT 1[0m
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "users" ("created_at", "email", "encrypted_password", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", Thu, 05 Sep 2013 14:55:31 UTC +00:00], ["email", "example@example.com"], ["encrypted_password", "$2a$04$NIbmBVP64IDh0FH26tPzOuKaiTwvxjPmiLLnxM1VeyX3es1Ia4RnW"], ["updated_at", Thu, 05 Sep 2013 14:55:31 UTC +00:00]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "research_items" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", Thu, 05 Sep 2013 14:55:31 UTC +00:00], ["updated_at", Thu, 05 Sep 2013 14:55:31 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by ResearchItemsController#create as HTML
+  Parameters: {"id"=>"0"}
+  [1m[36mResearchItem Load (0.1ms)[0m  [1mSELECT "research_items".* FROM "research_items" WHERE "research_items"."id" = 0 LIMIT 1[0m
+  [1m[35mBloombergResearch Load (0.1ms)[0m  SELECT "bloomberg_researches".* FROM "bloomberg_researches" WHERE "bloomberg_researches"."id" = 0 LIMIT 1
+Completed 200 OK in 4ms (Views: 0.8ms | ActiveRecord: 0.5ms)
+  [1m[36m (0.5ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT 1 AS one FROM "users" WHERE "users"."email" = 'example@example.com' LIMIT 1
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[36mSQL (9.9ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "encrypted_password", "updated_at") VALUES (?, ?, ?, ?)[0m  [["created_at", Thu, 05 Sep 2013 14:57:38 UTC +00:00], ["email", "example@example.com"], ["encrypted_password", "$2a$04$PokuTPUIDDcJcXdnNQZIae.AqCPoXd4c4w618lFE0AMZNKYEuVGGO"], ["updated_at", Thu, 05 Sep 2013 14:57:38 UTC +00:00]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "research_items" ("created_at", "updated_at") VALUES (?, ?)  [["created_at", Thu, 05 Sep 2013 14:57:38 UTC +00:00], ["updated_at", Thu, 05 Sep 2013 14:57:38 UTC +00:00]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by ResearchItemsController#create as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mResearchItem Load (0.1ms)[0m  SELECT "research_items".* FROM "research_items" WHERE "research_items"."id" = 1 LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "research_items" SET "user_id" = ?, "updated_at" = ? WHERE "research_items"."id" = 1[0m  [["user_id", 1], ["updated_at", Thu, 05 Sep 2013 14:57:38 UTC +00:00]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  Rendered research_items/new.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 45ms (Views: 15.2ms | ActiveRecord: 0.8ms)
+  [1m[36m (0.5ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT 1 AS one FROM "users" WHERE "users"."email" = 'example@example.com' LIMIT 1
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "encrypted_password", "updated_at") VALUES (?, ?, ?, ?)[0m  [["created_at", Thu, 05 Sep 2013 14:57:38 UTC +00:00], ["email", "example@example.com"], ["encrypted_password", "$2a$04$tDK5wXHx2HpPZFSagkXt..GrVxLvZ/j.deQJL/VKTjSN/tYsBSLP2"], ["updated_at", Thu, 05 Sep 2013 14:57:38 UTC +00:00]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "research_items" ("created_at", "updated_at") VALUES (?, ?)  [["created_at", Thu, 05 Sep 2013 14:57:38 UTC +00:00], ["updated_at", Thu, 05 Sep 2013 14:57:38 UTC +00:00]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.6ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE "users"."email" = 'example@example.com' LIMIT 1[0m
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "users" ("created_at", "email", "encrypted_password", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", Thu, 05 Sep 2013 14:57:38 UTC +00:00], ["email", "example@example.com"], ["encrypted_password", "$2a$04$Or4DgBJG9.dzfip6ip496Oa4bg5ZcG9FEB9LUy4jjBx7P53hTAs4C"], ["updated_at", Thu, 05 Sep 2013 14:57:38 UTC +00:00]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "research_items" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", Thu, 05 Sep 2013 14:57:38 UTC +00:00], ["updated_at", Thu, 05 Sep 2013 14:57:38 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by ResearchItemsController#create as HTML
+  Parameters: {"id"=>"0"}
+  [1m[36mResearchItem Load (0.1ms)[0m  [1mSELECT "research_items".* FROM "research_items" WHERE "research_items"."id" = 0 LIMIT 1[0m
+  [1m[35mBloombergResearch Load (0.1ms)[0m  SELECT "bloomberg_researches".* FROM "bloomberg_researches" WHERE "bloomberg_researches"."id" = 0 LIMIT 1
+Completed 200 OK in 3ms (Views: 0.8ms | ActiveRecord: 0.4ms)
+  [1m[36m (0.4ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT 1 AS one FROM "users" WHERE "users"."email" = 'example@example.com' LIMIT 1
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "encrypted_password", "updated_at") VALUES (?, ?, ?, ?)[0m  [["created_at", Thu, 05 Sep 2013 14:57:38 UTC +00:00], ["email", "example@example.com"], ["encrypted_password", "$2a$04$WeadwWj.1m8EUcXpsgmWbuocZsuouSuWP5B9i14RGQT8QUDYqLkme"], ["updated_at", Thu, 05 Sep 2013 14:57:38 UTC +00:00]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "research_items" ("created_at", "updated_at") VALUES (?, ?)  [["created_at", Thu, 05 Sep 2013 14:57:38 UTC +00:00], ["updated_at", Thu, 05 Sep 2013 14:57:38 UTC +00:00]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by ResearchItemsController#create as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mResearchItem Load (0.1ms)[0m  SELECT "research_items".* FROM "research_items" WHERE "research_items"."id" = 1 LIMIT 1
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "research_items" SET "user_id" = ?, "updated_at" = ? WHERE "research_items"."id" = 1[0m  [["user_id", 1], ["updated_at", Thu, 05 Sep 2013 14:57:38 UTC +00:00]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Completed 200 OK in 6ms (Views: 1.2ms | ActiveRecord: 0.6ms)
+  [1m[36m (0.5ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT 1 AS one FROM "users" WHERE "users"."email" = 'example@example.com' LIMIT 1
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "encrypted_password", "updated_at") VALUES (?, ?, ?, ?)[0m  [["created_at", Thu, 05 Sep 2013 14:57:38 UTC +00:00], ["email", "example@example.com"], ["encrypted_password", "$2a$04$19mNzOVkoYzS7po1HLOrwuPpRvI6fr/pXV1JZQYmE1qZdloRKVWyu"], ["updated_at", Thu, 05 Sep 2013 14:57:38 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "research_items" WHERE "research_items"."user_id" = ?[0m  [["user_id", 1]]
+Processing by ResearchItemsController#create as HTML
+  Parameters: {"id"=>nil}
+Completed 200 OK in 1ms (Views: 1.0ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "research_items" WHERE "research_items"."user_id" = ?  [["user_id", 1]]
+  [1m[36m (0.4ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT 1 AS one FROM "users" WHERE "users"."email" = 'example@example.com' LIMIT 1
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[36mSQL (9.9ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "encrypted_password", "updated_at") VALUES (?, ?, ?, ?)[0m  [["created_at", Thu, 05 Sep 2013 14:57:59 UTC +00:00], ["email", "example@example.com"], ["encrypted_password", "$2a$04$U30stAlJu6rd.nrFQjNIa.pIOHMW.syQy1RSxhsxhe1BMMpBUj8zq"], ["updated_at", Thu, 05 Sep 2013 14:57:59 UTC +00:00]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "research_items" ("created_at", "updated_at") VALUES (?, ?)  [["created_at", Thu, 05 Sep 2013 14:57:59 UTC +00:00], ["updated_at", Thu, 05 Sep 2013 14:57:59 UTC +00:00]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by ResearchItemsController#create as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mResearchItem Load (0.1ms)[0m  SELECT "research_items".* FROM "research_items" WHERE "research_items"."id" = 1 LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "research_items" SET "user_id" = ?, "updated_at" = ? WHERE "research_items"."id" = 1[0m  [["user_id", 1], ["updated_at", Thu, 05 Sep 2013 14:57:59 UTC +00:00]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  Rendered research_items/new.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 45ms (Views: 14.5ms | ActiveRecord: 0.9ms)
+  [1m[36m (0.4ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT 1 AS one FROM "users" WHERE "users"."email" = 'example@example.com' LIMIT 1
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "encrypted_password", "updated_at") VALUES (?, ?, ?, ?)[0m  [["created_at", Thu, 05 Sep 2013 14:57:59 UTC +00:00], ["email", "example@example.com"], ["encrypted_password", "$2a$04$lXJBK00rCsCiKvTHIuaziOehqNZrf4m0sS6fpRUtsfZ5tCuTHqaV2"], ["updated_at", Thu, 05 Sep 2013 14:57:59 UTC +00:00]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "research_items" ("created_at", "updated_at") VALUES (?, ?)  [["created_at", Thu, 05 Sep 2013 14:57:59 UTC +00:00], ["updated_at", Thu, 05 Sep 2013 14:57:59 UTC +00:00]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.4ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE "users"."email" = 'example@example.com' LIMIT 1[0m
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "users" ("created_at", "email", "encrypted_password", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", Thu, 05 Sep 2013 14:57:59 UTC +00:00], ["email", "example@example.com"], ["encrypted_password", "$2a$04$ZWKepzF52VWXsSppOyyVuuNksFXaL.FL.lpuAFeYU8Jfqg1ZbQtCW"], ["updated_at", Thu, 05 Sep 2013 14:57:59 UTC +00:00]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "research_items" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", Thu, 05 Sep 2013 14:57:59 UTC +00:00], ["updated_at", Thu, 05 Sep 2013 14:57:59 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by ResearchItemsController#create as HTML
+  Parameters: {"id"=>"0"}
+  [1m[36mResearchItem Load (0.2ms)[0m  [1mSELECT "research_items".* FROM "research_items" WHERE "research_items"."id" = 0 LIMIT 1[0m
+  [1m[35mBloombergResearch Load (0.1ms)[0m  SELECT "bloomberg_researches".* FROM "bloomberg_researches" WHERE "bloomberg_researches"."id" = 0 LIMIT 1
+Completed 200 OK in 5ms (Views: 1.1ms | ActiveRecord: 0.6ms)
+  [1m[36m (0.4ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT 1 AS one FROM "users" WHERE "users"."email" = 'example@example.com' LIMIT 1
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "encrypted_password", "updated_at") VALUES (?, ?, ?, ?)[0m  [["created_at", Thu, 05 Sep 2013 14:57:59 UTC +00:00], ["email", "example@example.com"], ["encrypted_password", "$2a$04$Et1MdlIR1bCEirCrz6XhiOklEjJZvyV.4X2xigZ6fLWgWQcqEnjWO"], ["updated_at", Thu, 05 Sep 2013 14:57:59 UTC +00:00]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "research_items" ("created_at", "updated_at") VALUES (?, ?)  [["created_at", Thu, 05 Sep 2013 14:57:59 UTC +00:00], ["updated_at", Thu, 05 Sep 2013 14:57:59 UTC +00:00]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by ResearchItemsController#create as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mResearchItem Load (0.1ms)[0m  SELECT "research_items".* FROM "research_items" WHERE "research_items"."id" = 1 LIMIT 1
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "research_items" SET "user_id" = ?, "updated_at" = ? WHERE "research_items"."id" = 1[0m  [["user_id", 1], ["updated_at", Thu, 05 Sep 2013 14:57:59 UTC +00:00]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Completed 200 OK in 11ms (Views: 1.5ms | ActiveRecord: 1.0ms)
+  [1m[36m (0.5ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.3ms)[0m  SELECT 1 AS one FROM "users" WHERE "users"."email" = 'example@example.com' LIMIT 1
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "encrypted_password", "updated_at") VALUES (?, ?, ?, ?)[0m  [["created_at", Thu, 05 Sep 2013 14:57:59 UTC +00:00], ["email", "example@example.com"], ["encrypted_password", "$2a$04$ZVY3fFOjsaTKKtTeg6lZOeRPgc6Ql.K389yKkBsPaQZZWS7k.86tW"], ["updated_at", Thu, 05 Sep 2013 14:57:59 UTC +00:00]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.4ms)[0m  [1mSELECT COUNT(*) FROM "research_items" WHERE "research_items"."user_id" = ?[0m  [["user_id", 1]]
+Processing by ResearchItemsController#create as HTML
+  Parameters: {"id"=>nil}
+Completed 200 OK in 1ms (Views: 0.8ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "research_items" WHERE "research_items"."user_id" = ?  [["user_id", 1]]
+  [1m[36m (0.4ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT 1 AS one FROM "users" WHERE "users"."email" = 'example@example.com' LIMIT 1
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[36mSQL (10.6ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "encrypted_password", "updated_at") VALUES (?, ?, ?, ?)[0m  [["created_at", Thu, 05 Sep 2013 14:58:15 UTC +00:00], ["email", "example@example.com"], ["encrypted_password", "$2a$04$gDoRj83YK5pz0C9SskVJ0.qIrDc7qHcg8m6t5tXojBlsXCns3Otri"], ["updated_at", Thu, 05 Sep 2013 14:58:15 UTC +00:00]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "research_items" ("created_at", "updated_at") VALUES (?, ?)  [["created_at", Thu, 05 Sep 2013 14:58:15 UTC +00:00], ["updated_at", Thu, 05 Sep 2013 14:58:15 UTC +00:00]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by ResearchItemsController#create as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mResearchItem Load (0.2ms)[0m  SELECT "research_items".* FROM "research_items" WHERE "research_items"."id" = 1 LIMIT 1
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.4ms)[0m  [1mUPDATE "research_items" SET "user_id" = ?, "updated_at" = ? WHERE "research_items"."id" = 1[0m  [["user_id", 1], ["updated_at", Thu, 05 Sep 2013 14:58:15 UTC +00:00]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+  Rendered research_items/new.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 86ms (Views: 24.1ms | ActiveRecord: 1.5ms)
+  [1m[36m (0.4ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT 1 AS one FROM "users" WHERE "users"."email" = 'example@example.com' LIMIT 1
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "encrypted_password", "updated_at") VALUES (?, ?, ?, ?)[0m  [["created_at", Thu, 05 Sep 2013 14:58:15 UTC +00:00], ["email", "example@example.com"], ["encrypted_password", "$2a$04$.mWss.0.yqC9WdY/.xIEH.6/xRIZQjg9ZSzmZthjk/gOg3BvcN716"], ["updated_at", Thu, 05 Sep 2013 14:58:15 UTC +00:00]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.3ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "research_items" ("created_at", "updated_at") VALUES (?, ?)  [["created_at", Thu, 05 Sep 2013 14:58:15 UTC +00:00], ["updated_at", Thu, 05 Sep 2013 14:58:15 UTC +00:00]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.4ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE "users"."email" = 'example@example.com' LIMIT 1[0m
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "users" ("created_at", "email", "encrypted_password", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", Thu, 05 Sep 2013 14:58:15 UTC +00:00], ["email", "example@example.com"], ["encrypted_password", "$2a$04$QFFpEURxL0BnzUtLY0UZn.qpIi8.P.FUmu.z7JPdObO.DRfx3onpe"], ["updated_at", Thu, 05 Sep 2013 14:58:15 UTC +00:00]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "research_items" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", Thu, 05 Sep 2013 14:58:15 UTC +00:00], ["updated_at", Thu, 05 Sep 2013 14:58:15 UTC +00:00]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by ResearchItemsController#create as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mResearchItem Load (0.1ms)[0m  [1mSELECT "research_items".* FROM "research_items" WHERE "research_items"."id" = 2 LIMIT 1[0m
+  [1m[35mBloombergResearch Load (0.1ms)[0m  SELECT "bloomberg_researches".* FROM "bloomberg_researches" WHERE "bloomberg_researches"."id" = 2 LIMIT 1
+Completed 200 OK in 4ms (Views: 0.9ms | ActiveRecord: 0.5ms)
+  [1m[36m (0.4ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.3ms)[0m  SELECT 1 AS one FROM "users" WHERE "users"."email" = 'example@example.com' LIMIT 1
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "encrypted_password", "updated_at") VALUES (?, ?, ?, ?)[0m  [["created_at", Thu, 05 Sep 2013 14:58:15 UTC +00:00], ["email", "example@example.com"], ["encrypted_password", "$2a$04$R7O3sqCddXugnKl9t3KsZ.i8owxZoScslPa6pqhtG.e4n6iQm2P/u"], ["updated_at", Thu, 05 Sep 2013 14:58:15 UTC +00:00]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "research_items" ("created_at", "updated_at") VALUES (?, ?)  [["created_at", Thu, 05 Sep 2013 14:58:15 UTC +00:00], ["updated_at", Thu, 05 Sep 2013 14:58:15 UTC +00:00]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by ResearchItemsController#create as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mResearchItem Load (0.1ms)[0m  SELECT "research_items".* FROM "research_items" WHERE "research_items"."id" = 1 LIMIT 1
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "research_items" SET "user_id" = ?, "updated_at" = ? WHERE "research_items"."id" = 1[0m  [["user_id", 1], ["updated_at", Thu, 05 Sep 2013 14:58:15 UTC +00:00]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Completed 200 OK in 6ms (Views: 0.9ms | ActiveRecord: 0.6ms)
+  [1m[36m (0.4ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.3ms)[0m  SELECT 1 AS one FROM "users" WHERE "users"."email" = 'example@example.com' LIMIT 1
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[36mSQL (0.8ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "encrypted_password", "updated_at") VALUES (?, ?, ?, ?)[0m  [["created_at", Thu, 05 Sep 2013 14:58:15 UTC +00:00], ["email", "example@example.com"], ["encrypted_password", "$2a$04$8LbcsB06Kmraihh/qq3jU.c7wdYpsnhggShVdfZsfMtY.SMDqVqF."], ["updated_at", Thu, 05 Sep 2013 14:58:15 UTC +00:00]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "research_items" WHERE "research_items"."user_id" = ?[0m  [["user_id", 1]]
+Processing by ResearchItemsController#create as HTML
+  Parameters: {"id"=>nil}
+Completed 200 OK in 1ms (Views: 1.1ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "research_items" WHERE "research_items"."user_id" = ?  [["user_id", 1]]
+  [1m[36m (0.5ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT 1 AS one FROM "users" WHERE "users"."email" = 'example@example.com' LIMIT 1
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[36mSQL (9.0ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "encrypted_password", "updated_at") VALUES (?, ?, ?, ?)[0m  [["created_at", Thu, 05 Sep 2013 14:59:58 UTC +00:00], ["email", "example@example.com"], ["encrypted_password", "$2a$04$RlRLDr5TQIqnBQ4zA4m/8.B3NdZRt.8f.p7y.b5kvQUhkSa4JFNzW"], ["updated_at", Thu, 05 Sep 2013 14:59:58 UTC +00:00]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "research_items" WHERE "research_items"."user_id" = ?[0m  [["user_id", 1]]
+Processing by ResearchItemsController#create as HTML
+  Parameters: {"id"=>nil}
+  Rendered research_items/new.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 13ms (Views: 12.7ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "research_items" WHERE "research_items"."user_id" = ?  [["user_id", 1]]
+  [1m[36m (3.6ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT 1 AS one FROM "users" WHERE "users"."email" = 'example@example.com' LIMIT 1
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[36mSQL (0.8ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "encrypted_password", "updated_at") VALUES (?, ?, ?, ?)[0m  [["created_at", Thu, 05 Sep 2013 14:59:58 UTC +00:00], ["email", "example@example.com"], ["encrypted_password", "$2a$04$KUw/ODIcdINPFQqavnm5j.D/JwbMMpUHB2Zx1phCUmnwdokY8IgSu"], ["updated_at", Thu, 05 Sep 2013 14:59:58 UTC +00:00]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "research_items" ("created_at", "updated_at") VALUES (?, ?)  [["created_at", Thu, 05 Sep 2013 14:59:58 UTC +00:00], ["updated_at", Thu, 05 Sep 2013 14:59:58 UTC +00:00]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.4ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.3ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE "users"."email" = 'example@example.com' LIMIT 1[0m
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "users" ("created_at", "email", "encrypted_password", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", Thu, 05 Sep 2013 14:59:58 UTC +00:00], ["email", "example@example.com"], ["encrypted_password", "$2a$04$DHn7Rn2o7iEY0o1n7OQR7.FgsUGHE/u5cxbLVU0AcYBJwyB8pjGym"], ["updated_at", Thu, 05 Sep 2013 14:59:58 UTC +00:00]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "research_items" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", Thu, 05 Sep 2013 14:59:58 UTC +00:00], ["updated_at", Thu, 05 Sep 2013 14:59:58 UTC +00:00]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by ResearchItemsController#create as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mResearchItem Load (0.2ms)[0m  [1mSELECT "research_items".* FROM "research_items" WHERE "research_items"."id" = 1 LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  UPDATE "research_items" SET "user_id" = ?, "updated_at" = ? WHERE "research_items"."id" = 1  [["user_id", 1], ["updated_at", Thu, 05 Sep 2013 14:59:58 UTC +00:00]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Completed 200 OK in 15ms (Views: 0.8ms | ActiveRecord: 1.2ms)
+  [1m[35m (0.4ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE "users"."email" = 'example@example.com' LIMIT 1[0m
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "users" ("created_at", "email", "encrypted_password", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", Thu, 05 Sep 2013 14:59:58 UTC +00:00], ["email", "example@example.com"], ["encrypted_password", "$2a$04$TtdAQguAEADuD2njDyhtbOk/VVWffy3ODaO7EcXLf0wmchLWN0jcq"], ["updated_at", Thu, 05 Sep 2013 14:59:58 UTC +00:00]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "research_items" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", Thu, 05 Sep 2013 14:59:58 UTC +00:00], ["updated_at", Thu, 05 Sep 2013 14:59:58 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by ResearchItemsController#create as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mResearchItem Load (0.1ms)[0m  [1mSELECT "research_items".* FROM "research_items" WHERE "research_items"."id" = 1 LIMIT 1[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "research_items" SET "user_id" = ?, "updated_at" = ? WHERE "research_items"."id" = 1  [["user_id", 1], ["updated_at", Thu, 05 Sep 2013 14:59:58 UTC +00:00]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Completed 200 OK in 6ms (Views: 0.9ms | ActiveRecord: 0.6ms)
+  [1m[35m (0.4ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE "users"."email" = 'example@example.com' LIMIT 1[0m
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "users" ("created_at", "email", "encrypted_password", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", Thu, 05 Sep 2013 14:59:58 UTC +00:00], ["email", "example@example.com"], ["encrypted_password", "$2a$04$1ayb0qf1BUkHbEGk6u6hPeYn6EjpaA7EcQC0WlONPmsVLnKVpf11e"], ["updated_at", Thu, 05 Sep 2013 14:59:58 UTC +00:00]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "research_items" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", Thu, 05 Sep 2013 14:59:58 UTC +00:00], ["updated_at", Thu, 05 Sep 2013 14:59:58 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by ResearchItemsController#create as HTML
+  Parameters: {"id"=>"100"}
+  [1m[36mResearchItem Load (0.1ms)[0m  [1mSELECT "research_items".* FROM "research_items" WHERE "research_items"."id" = 100 LIMIT 1[0m
+  [1m[35mBloombergResearch Load (0.1ms)[0m  SELECT "bloomberg_researches".* FROM "bloomberg_researches" WHERE "bloomberg_researches"."id" = 100 LIMIT 1
+Completed 200 OK in 5ms (Views: 1.5ms | ActiveRecord: 0.5ms)
+  [1m[36m (0.5ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT 1 AS one FROM "users" WHERE "users"."email" = 'example@example.com' LIMIT 1
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[36mSQL (12.5ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "encrypted_password", "updated_at") VALUES (?, ?, ?, ?)[0m  [["created_at", Thu, 05 Sep 2013 15:00:52 UTC +00:00], ["email", "example@example.com"], ["encrypted_password", "$2a$04$nbwZ4JDjhNPjJEovWKSKHey7WFHgdF6dPY0IYdqa1h2hX/BMAB1VW"], ["updated_at", Thu, 05 Sep 2013 15:00:52 UTC +00:00]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "research_items" WHERE "research_items"."user_id" = ?[0m  [["user_id", 1]]
+Processing by ResearchItemsController#create as HTML
+  Parameters: {"id"=>nil}
+  Rendered research_items/new.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 12ms (Views: 11.6ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "research_items" WHERE "research_items"."user_id" = ?  [["user_id", 1]]
+  [1m[36m (0.4ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT 1 AS one FROM "users" WHERE "users"."email" = 'example@example.com' LIMIT 1
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "encrypted_password", "updated_at") VALUES (?, ?, ?, ?)[0m  [["created_at", Thu, 05 Sep 2013 15:00:52 UTC +00:00], ["email", "example@example.com"], ["encrypted_password", "$2a$04$KUlyCUS8cNJpwh6hQqgxx.h4HNel6EQUqLe4sK8UOdftNqR73FrTq"], ["updated_at", Thu, 05 Sep 2013 15:00:52 UTC +00:00]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "research_items" ("created_at", "updated_at") VALUES (?, ?)  [["created_at", Thu, 05 Sep 2013 15:00:53 UTC +00:00], ["updated_at", Thu, 05 Sep 2013 15:00:53 UTC +00:00]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.4ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE "users"."email" = 'example@example.com' LIMIT 1[0m
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "users" ("created_at", "email", "encrypted_password", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", Thu, 05 Sep 2013 15:00:53 UTC +00:00], ["email", "example@example.com"], ["encrypted_password", "$2a$04$nahOhmTddm2t0wI1j12EkO3L1UhqBVOrSjXZMkmHhmPonCi.rEsu6"], ["updated_at", Thu, 05 Sep 2013 15:00:53 UTC +00:00]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "research_items" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", Thu, 05 Sep 2013 15:00:53 UTC +00:00], ["updated_at", Thu, 05 Sep 2013 15:00:53 UTC +00:00]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by ResearchItemsController#create as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mResearchItem Load (0.1ms)[0m  [1mSELECT "research_items".* FROM "research_items" WHERE "research_items"."id" = 1 LIMIT 1[0m
+Completed 500 Internal Server Error in 5ms
+  [1m[35m (0.5ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE "users"."email" = 'example@example.com' LIMIT 1[0m
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "users" ("created_at", "email", "encrypted_password", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", Thu, 05 Sep 2013 15:00:53 UTC +00:00], ["email", "example@example.com"], ["encrypted_password", "$2a$04$FnZcgFx8wR/k/W8NCqLc6.XhP8WutvViVt68wp6/p.S3iOY4EKE8q"], ["updated_at", Thu, 05 Sep 2013 15:00:53 UTC +00:00]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "research_items" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", Thu, 05 Sep 2013 15:00:53 UTC +00:00], ["updated_at", Thu, 05 Sep 2013 15:00:53 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by ResearchItemsController#create as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mResearchItem Load (0.2ms)[0m  [1mSELECT "research_items".* FROM "research_items" WHERE "research_items"."id" = 1 LIMIT 1[0m
+Completed 500 Internal Server Error in 2ms
+  [1m[35m (0.6ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE "users"."email" = 'example@example.com' LIMIT 1[0m
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "users" ("created_at", "email", "encrypted_password", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", Thu, 05 Sep 2013 15:00:53 UTC +00:00], ["email", "example@example.com"], ["encrypted_password", "$2a$04$IengPNlzuj0FKBAvXEl3tOyGNN.lSdZlaz89w5q79ehBthXbH8eQ."], ["updated_at", Thu, 05 Sep 2013 15:00:53 UTC +00:00]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "research_items" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", Thu, 05 Sep 2013 15:00:53 UTC +00:00], ["updated_at", Thu, 05 Sep 2013 15:00:53 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by ResearchItemsController#create as HTML
+  Parameters: {"id"=>"100"}
+  [1m[36mResearchItem Load (0.1ms)[0m  [1mSELECT "research_items".* FROM "research_items" WHERE "research_items"."id" = 100 LIMIT 1[0m
+Completed 500 Internal Server Error in 1ms
+  [1m[35m (0.5ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT 1 AS one FROM "users" WHERE "users"."email" = 'example@example.com' LIMIT 1
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[36mSQL (6.0ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "encrypted_password", "updated_at") VALUES (?, ?, ?, ?)[0m  [["created_at", Thu, 05 Sep 2013 15:01:03 UTC +00:00], ["email", "example@example.com"], ["encrypted_password", "$2a$04$MQTK8vfYGbmEg9NxIZMAzucYBhUs4gPP5Ip4.sU9HeJV0LzYrDBbq"], ["updated_at", Thu, 05 Sep 2013 15:01:03 UTC +00:00]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "research_items" WHERE "research_items"."user_id" = ?[0m  [["user_id", 1]]
+Processing by ResearchItemsController#create as HTML
+  Parameters: {"id"=>nil}
+  Rendered research_items/new.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 10ms (Views: 10.1ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "research_items" WHERE "research_items"."user_id" = ?  [["user_id", 1]]
+  [1m[36m (1.7ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT 1 AS one FROM "users" WHERE "users"."email" = 'example@example.com' LIMIT 1
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "encrypted_password", "updated_at") VALUES (?, ?, ?, ?)[0m  [["created_at", Thu, 05 Sep 2013 15:01:03 UTC +00:00], ["email", "example@example.com"], ["encrypted_password", "$2a$04$n4xMDqU1DcdedSSJkZ.ShOQx2ddVDWxGQUSRXGOjeT3tATUH7dRuC"], ["updated_at", Thu, 05 Sep 2013 15:01:03 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "research_items" ("created_at", "updated_at") VALUES (?, ?)  [["created_at", Thu, 05 Sep 2013 15:01:03 UTC +00:00], ["updated_at", Thu, 05 Sep 2013 15:01:03 UTC +00:00]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.5ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE "users"."email" = 'example@example.com' LIMIT 1[0m
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "users" ("created_at", "email", "encrypted_password", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", Thu, 05 Sep 2013 15:01:03 UTC +00:00], ["email", "example@example.com"], ["encrypted_password", "$2a$04$y7U/05xSAQnZu2IEXC4PIuWlKCT7iIrKUExrugUfKH5aD/q.NO/uy"], ["updated_at", Thu, 05 Sep 2013 15:01:03 UTC +00:00]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "research_items" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", Thu, 05 Sep 2013 15:01:03 UTC +00:00], ["updated_at", Thu, 05 Sep 2013 15:01:03 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by ResearchItemsController#create as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mResearchItem Load (0.1ms)[0m  [1mSELECT "research_items".* FROM "research_items" WHERE "research_items"."id" = 1 LIMIT 1[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "research_items" SET "user_id" = ?, "updated_at" = ? WHERE "research_items"."id" = 1  [["user_id", 1], ["updated_at", Thu, 05 Sep 2013 15:01:03 UTC +00:00]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Completed 200 OK in 11ms (Views: 1.2ms | ActiveRecord: 0.8ms)
+  [1m[35m (0.5ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE "users"."email" = 'example@example.com' LIMIT 1[0m
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "users" ("created_at", "email", "encrypted_password", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", Thu, 05 Sep 2013 15:01:03 UTC +00:00], ["email", "example@example.com"], ["encrypted_password", "$2a$04$9PcIUk4wLWbZ/6BVVCMsEeQixRrlKWADwjbfxmu5pMSVa.4ejpvze"], ["updated_at", Thu, 05 Sep 2013 15:01:03 UTC +00:00]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "research_items" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", Thu, 05 Sep 2013 15:01:03 UTC +00:00], ["updated_at", Thu, 05 Sep 2013 15:01:03 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by ResearchItemsController#create as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mResearchItem Load (0.1ms)[0m  [1mSELECT "research_items".* FROM "research_items" WHERE "research_items"."id" = 1 LIMIT 1[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "research_items" SET "user_id" = ?, "updated_at" = ? WHERE "research_items"."id" = 1  [["user_id", 1], ["updated_at", Thu, 05 Sep 2013 15:01:03 UTC +00:00]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Completed 200 OK in 9ms (Views: 1.3ms | ActiveRecord: 0.9ms)
+  [1m[35m (0.5ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE "users"."email" = 'example@example.com' LIMIT 1[0m
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "users" ("created_at", "email", "encrypted_password", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", Thu, 05 Sep 2013 15:01:03 UTC +00:00], ["email", "example@example.com"], ["encrypted_password", "$2a$04$zFUvTD8BbbGBqCbTvPvCEOrMHx63YNIjuqlDkyw79b1GQtM1DHEHK"], ["updated_at", Thu, 05 Sep 2013 15:01:03 UTC +00:00]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "research_items" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", Thu, 05 Sep 2013 15:01:03 UTC +00:00], ["updated_at", Thu, 05 Sep 2013 15:01:03 UTC +00:00]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by ResearchItemsController#create as HTML
+  Parameters: {"id"=>"100"}
+  [1m[36mResearchItem Load (0.2ms)[0m  [1mSELECT "research_items".* FROM "research_items" WHERE "research_items"."id" = 100 LIMIT 1[0m
+  [1m[35mBloombergResearch Load (0.2ms)[0m  SELECT "bloomberg_researches".* FROM "bloomberg_researches" WHERE "bloomberg_researches"."id" = 100 LIMIT 1
+Completed 200 OK in 25ms (Views: 1.2ms | ActiveRecord: 0.8ms)
+  [1m[36m (0.4ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT 1 AS one FROM "users" WHERE "users"."email" = 'example@example.com' LIMIT 1
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[36mSQL (9.5ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "encrypted_password", "updated_at") VALUES (?, ?, ?, ?)[0m  [["created_at", Thu, 05 Sep 2013 15:03:26 UTC +00:00], ["email", "example@example.com"], ["encrypted_password", "$2a$04$iiSguIAexnjrQkNkI36IT..ZpdBKAJQpcdGv9hOwDMgQi3jbNQV3u"], ["updated_at", Thu, 05 Sep 2013 15:03:26 UTC +00:00]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "research_items" WHERE "research_items"."user_id" = ?[0m  [["user_id", 1]]
+Processing by ResearchItemsController#create as HTML
+  Parameters: {"id"=>nil}
+  Rendered research_items/new.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 21ms (Views: 20.1ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "research_items" WHERE "research_items"."user_id" = ?  [["user_id", 1]]
+  [1m[36m (0.4ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT 1 AS one FROM "users" WHERE "users"."email" = 'example@example.com' LIMIT 1
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "encrypted_password", "updated_at") VALUES (?, ?, ?, ?)[0m  [["created_at", Thu, 05 Sep 2013 15:03:26 UTC +00:00], ["email", "example@example.com"], ["encrypted_password", "$2a$04$tKia3mJ8d07ix9a7YCTLZOaTfEMyyUGmbLeA1bGi5z9LR7oT9o/m6"], ["updated_at", Thu, 05 Sep 2013 15:03:26 UTC +00:00]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "research_items" ("created_at", "updated_at") VALUES (?, ?)  [["created_at", Thu, 05 Sep 2013 15:03:26 UTC +00:00], ["updated_at", Thu, 05 Sep 2013 15:03:26 UTC +00:00]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.4ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.3ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE "users"."email" = 'example@example.com' LIMIT 1[0m
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "users" ("created_at", "email", "encrypted_password", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", Thu, 05 Sep 2013 15:03:26 UTC +00:00], ["email", "example@example.com"], ["encrypted_password", "$2a$04$ar3nUwoLIfiSyXzDleE.Led/ZG2td8f85Zqsg/aT469dC25cdc2Uy"], ["updated_at", Thu, 05 Sep 2013 15:03:26 UTC +00:00]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "research_items" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", Thu, 05 Sep 2013 15:03:26 UTC +00:00], ["updated_at", Thu, 05 Sep 2013 15:03:26 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by ResearchItemsController#create as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mResearchItem Load (0.1ms)[0m  [1mSELECT "research_items".* FROM "research_items" WHERE "research_items"."id" = 1 LIMIT 1[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "research_items" SET "user_id" = ?, "updated_at" = ? WHERE "research_items"."id" = 1  [["user_id", 1], ["updated_at", Thu, 05 Sep 2013 15:03:26 UTC +00:00]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Completed 200 OK in 13ms (Views: 0.8ms | ActiveRecord: 1.0ms)
+  [1m[35m (0.5ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE "users"."email" = 'example@example.com' LIMIT 1[0m
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "users" ("created_at", "email", "encrypted_password", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", Thu, 05 Sep 2013 15:03:26 UTC +00:00], ["email", "example@example.com"], ["encrypted_password", "$2a$04$6sqzN3/hEThMOQDQbZkWFOMFZiMN1QKaOm3Y6j7ItYAwZGReCEE8."], ["updated_at", Thu, 05 Sep 2013 15:03:26 UTC +00:00]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "research_items" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", Thu, 05 Sep 2013 15:03:26 UTC +00:00], ["updated_at", Thu, 05 Sep 2013 15:03:26 UTC +00:00]]
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by ResearchItemsController#create as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mResearchItem Load (0.1ms)[0m  [1mSELECT "research_items".* FROM "research_items" WHERE "research_items"."id" = 1 LIMIT 1[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "research_items" SET "user_id" = ?, "updated_at" = ? WHERE "research_items"."id" = 1  [["user_id", 1], ["updated_at", Thu, 05 Sep 2013 15:03:26 UTC +00:00]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Completed 200 OK in 6ms (Views: 0.8ms | ActiveRecord: 0.6ms)
+  [1m[35m (0.5ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE "users"."email" = 'example@example.com' LIMIT 1[0m
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "users" ("created_at", "email", "encrypted_password", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", Thu, 05 Sep 2013 15:03:26 UTC +00:00], ["email", "example@example.com"], ["encrypted_password", "$2a$04$tNQvreVPwnWfwdUoZpKY4eW1OujxuGsMChsM3GRFIXq4tA4r5IQFe"], ["updated_at", Thu, 05 Sep 2013 15:03:26 UTC +00:00]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "research_items" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", Thu, 05 Sep 2013 15:03:26 UTC +00:00], ["updated_at", Thu, 05 Sep 2013 15:03:26 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.5ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT 1 AS one FROM "users" WHERE "users"."email" = 'example@example.com' LIMIT 1
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[36mSQL (6.5ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "encrypted_password", "updated_at") VALUES (?, ?, ?, ?)[0m  [["created_at", Thu, 05 Sep 2013 15:03:30 UTC +00:00], ["email", "example@example.com"], ["encrypted_password", "$2a$04$/HW.7ihb.QNGYkTm383YOOsccT6DmgF3qx2e2Qb0zzTVoqsE4C5Nu"], ["updated_at", Thu, 05 Sep 2013 15:03:30 UTC +00:00]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "research_items" WHERE "research_items"."user_id" = ?[0m  [["user_id", 1]]
+Processing by ResearchItemsController#create as HTML
+  Parameters: {"id"=>nil}
+  Rendered research_items/new.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 10ms (Views: 9.7ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "research_items" WHERE "research_items"."user_id" = ?  [["user_id", 1]]
+  [1m[36m (2.4ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT 1 AS one FROM "users" WHERE "users"."email" = 'example@example.com' LIMIT 1
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "encrypted_password", "updated_at") VALUES (?, ?, ?, ?)[0m  [["created_at", Thu, 05 Sep 2013 15:03:30 UTC +00:00], ["email", "example@example.com"], ["encrypted_password", "$2a$04$.cYgHCfFYprGQncAzChGV.a/qNYE9ZxATbEEZj.H4IPJ8IVTYH8Yq"], ["updated_at", Thu, 05 Sep 2013 15:03:30 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "research_items" ("created_at", "updated_at") VALUES (?, ?)  [["created_at", Thu, 05 Sep 2013 15:03:30 UTC +00:00], ["updated_at", Thu, 05 Sep 2013 15:03:30 UTC +00:00]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.5ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE "users"."email" = 'example@example.com' LIMIT 1[0m
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "users" ("created_at", "email", "encrypted_password", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", Thu, 05 Sep 2013 15:03:30 UTC +00:00], ["email", "example@example.com"], ["encrypted_password", "$2a$04$jD2YPKXVcA37fn1ZyQL80u0ANruY2K86VCv1wL6ee5EwylrsvnGB6"], ["updated_at", Thu, 05 Sep 2013 15:03:30 UTC +00:00]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "research_items" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", Thu, 05 Sep 2013 15:03:30 UTC +00:00], ["updated_at", Thu, 05 Sep 2013 15:03:30 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by ResearchItemsController#create as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mResearchItem Load (0.1ms)[0m  [1mSELECT "research_items".* FROM "research_items" WHERE "research_items"."id" = 1 LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "research_items" SET "user_id" = ?, "updated_at" = ? WHERE "research_items"."id" = 1  [["user_id", 1], ["updated_at", Thu, 05 Sep 2013 15:03:30 UTC +00:00]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Completed 200 OK in 10ms (Views: 0.8ms | ActiveRecord: 0.8ms)
+  [1m[35m (0.4ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE "users"."email" = 'example@example.com' LIMIT 1[0m
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "users" ("created_at", "email", "encrypted_password", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", Thu, 05 Sep 2013 15:03:30 UTC +00:00], ["email", "example@example.com"], ["encrypted_password", "$2a$04$YOTmyap78t1I9W.yhEVZFu9ShTLtF3ft0PhCEa5pDbpVnkPozylS."], ["updated_at", Thu, 05 Sep 2013 15:03:30 UTC +00:00]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "research_items" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", Thu, 05 Sep 2013 15:03:30 UTC +00:00], ["updated_at", Thu, 05 Sep 2013 15:03:30 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by ResearchItemsController#create as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mResearchItem Load (0.1ms)[0m  [1mSELECT "research_items".* FROM "research_items" WHERE "research_items"."id" = 1 LIMIT 1[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "research_items" SET "user_id" = ?, "updated_at" = ? WHERE "research_items"."id" = 1  [["user_id", 1], ["updated_at", Thu, 05 Sep 2013 15:03:30 UTC +00:00]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Completed 200 OK in 6ms (Views: 0.9ms | ActiveRecord: 0.7ms)
+  [1m[35m (0.5ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE "users"."email" = 'example@example.com' LIMIT 1[0m
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "users" ("created_at", "email", "encrypted_password", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", Thu, 05 Sep 2013 15:03:30 UTC +00:00], ["email", "example@example.com"], ["encrypted_password", "$2a$04$hDnroZWh3JX5UP9vyzRGHejbza4Fqaf20TBI939SClTs8LVCvBv22"], ["updated_at", Thu, 05 Sep 2013 15:03:30 UTC +00:00]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "research_items" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", Thu, 05 Sep 2013 15:03:30 UTC +00:00], ["updated_at", Thu, 05 Sep 2013 15:03:30 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.5ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT 1 AS one FROM "users" WHERE "users"."email" = 'example@example.com' LIMIT 1
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[36mSQL (6.4ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "encrypted_password", "updated_at") VALUES (?, ?, ?, ?)[0m  [["created_at", Thu, 05 Sep 2013 15:04:21 UTC +00:00], ["email", "example@example.com"], ["encrypted_password", "$2a$04$6CcMYvn8zKtpqwU/fQoIvuc8ZHSZNS63V2/QFCI0Y1/yy94Snz5tu"], ["updated_at", Thu, 05 Sep 2013 15:04:21 UTC +00:00]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "research_items" WHERE "research_items"."user_id" = ?[0m  [["user_id", 1]]
+Processing by ResearchItemsController#create as HTML
+  Parameters: {"id"=>nil}
+  Rendered research_items/new.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 10ms (Views: 9.9ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "research_items" WHERE "research_items"."user_id" = ?  [["user_id", 1]]
+  [1m[36m (1.9ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT 1 AS one FROM "users" WHERE "users"."email" = 'example@example.com' LIMIT 1
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "encrypted_password", "updated_at") VALUES (?, ?, ?, ?)[0m  [["created_at", Thu, 05 Sep 2013 15:04:21 UTC +00:00], ["email", "example@example.com"], ["encrypted_password", "$2a$04$tX9fcPAmPZNr3VP/MvMsZuAFmcdb2.Z7zWlPUsTFRNia9RKcKoAOu"], ["updated_at", Thu, 05 Sep 2013 15:04:21 UTC +00:00]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "research_items" ("created_at", "updated_at") VALUES (?, ?)  [["created_at", Thu, 05 Sep 2013 15:04:21 UTC +00:00], ["updated_at", Thu, 05 Sep 2013 15:04:21 UTC +00:00]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.4ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE "users"."email" = 'example@example.com' LIMIT 1[0m
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "users" ("created_at", "email", "encrypted_password", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", Thu, 05 Sep 2013 15:04:21 UTC +00:00], ["email", "example@example.com"], ["encrypted_password", "$2a$04$LHOhpxqxTdHwwTse1Mb58uJ2hkQRkUblFfBvW0rv79MS7oPKiVWVK"], ["updated_at", Thu, 05 Sep 2013 15:04:21 UTC +00:00]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "research_items" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", Thu, 05 Sep 2013 15:04:21 UTC +00:00], ["updated_at", Thu, 05 Sep 2013 15:04:21 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by ResearchItemsController#create as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mResearchItem Load (0.2ms)[0m  [1mSELECT "research_items".* FROM "research_items" WHERE "research_items"."id" = 1 LIMIT 1[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "research_items" SET "user_id" = ?, "updated_at" = ? WHERE "research_items"."id" = 1  [["user_id", 1], ["updated_at", Thu, 05 Sep 2013 15:04:21 UTC +00:00]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Completed 200 OK in 40ms (Views: 0.9ms | ActiveRecord: 0.9ms)
+  [1m[35m (0.5ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE "users"."email" = 'example@example.com' LIMIT 1[0m
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "users" ("created_at", "email", "encrypted_password", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", Thu, 05 Sep 2013 15:04:21 UTC +00:00], ["email", "example@example.com"], ["encrypted_password", "$2a$04$SyTJjbcCCH21Upb0EhVnwebwcfwlwwSvk1P.ELw/MokL52yi4HwGq"], ["updated_at", Thu, 05 Sep 2013 15:04:21 UTC +00:00]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "research_items" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", Thu, 05 Sep 2013 15:04:21 UTC +00:00], ["updated_at", Thu, 05 Sep 2013 15:04:21 UTC +00:00]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by ResearchItemsController#create as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mResearchItem Load (0.1ms)[0m  [1mSELECT "research_items".* FROM "research_items" WHERE "research_items"."id" = 1 LIMIT 1[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  UPDATE "research_items" SET "user_id" = ?, "updated_at" = ? WHERE "research_items"."id" = 1  [["user_id", 1], ["updated_at", Thu, 05 Sep 2013 15:04:21 UTC +00:00]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Completed 200 OK in 5ms (Views: 0.9ms | ActiveRecord: 0.5ms)
+  [1m[35m (0.5ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE "users"."email" = 'example@example.com' LIMIT 1[0m
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "users" ("created_at", "email", "encrypted_password", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", Thu, 05 Sep 2013 15:04:21 UTC +00:00], ["email", "example@example.com"], ["encrypted_password", "$2a$04$YDk2JmcTBg7Ch4rFJFhVZOLTH0uVuCEpqu7tD2sq8P.nOhEARgFi2"], ["updated_at", Thu, 05 Sep 2013 15:04:21 UTC +00:00]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "research_items" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", Thu, 05 Sep 2013 15:04:21 UTC +00:00], ["updated_at", Thu, 05 Sep 2013 15:04:21 UTC +00:00]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.4ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT 1 AS one FROM "users" WHERE "users"."email" = 'example@example.com' LIMIT 1
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[36mSQL (12.5ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "encrypted_password", "updated_at") VALUES (?, ?, ?, ?)[0m  [["created_at", Thu, 05 Sep 2013 15:06:17 UTC +00:00], ["email", "example@example.com"], ["encrypted_password", "$2a$04$Y0nUCz7O.QUFULj8ACUkqezuMHFudUlFcW/OEkW9nUGJJKM0kIvb."], ["updated_at", Thu, 05 Sep 2013 15:06:17 UTC +00:00]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "research_items" WHERE "research_items"."user_id" = ?[0m  [["user_id", 1]]
+Processing by ResearchItemsController#create as HTML
+  Parameters: {"id"=>nil}
+  Rendered research_items/new.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 12ms (Views: 11.6ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "research_items" WHERE "research_items"."user_id" = ?  [["user_id", 1]]
+  [1m[36m (0.5ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT 1 AS one FROM "users" WHERE "users"."email" = 'example@example.com' LIMIT 1
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "encrypted_password", "updated_at") VALUES (?, ?, ?, ?)[0m  [["created_at", Thu, 05 Sep 2013 15:06:18 UTC +00:00], ["email", "example@example.com"], ["encrypted_password", "$2a$04$hs2s9FjcQdQEPUr0iHtu..vk4RfOeJ0i5TiLmG0j4mo2qQKTYhWM."], ["updated_at", Thu, 05 Sep 2013 15:06:18 UTC +00:00]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "research_items" ("created_at", "updated_at") VALUES (?, ?)  [["created_at", Thu, 05 Sep 2013 15:06:18 UTC +00:00], ["updated_at", Thu, 05 Sep 2013 15:06:18 UTC +00:00]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.4ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE "users"."email" = 'example@example.com' LIMIT 1[0m
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "users" ("created_at", "email", "encrypted_password", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", Thu, 05 Sep 2013 15:06:18 UTC +00:00], ["email", "example@example.com"], ["encrypted_password", "$2a$04$g8/2lcUz2Oc6jEyYsnE3NOIew0TqSRh6pjucje5zwsugKLRWAVfsa"], ["updated_at", Thu, 05 Sep 2013 15:06:18 UTC +00:00]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "research_items" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", Thu, 05 Sep 2013 15:06:18 UTC +00:00], ["updated_at", Thu, 05 Sep 2013 15:06:18 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by ResearchItemsController#create as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mResearchItem Load (0.1ms)[0m  [1mSELECT "research_items".* FROM "research_items" WHERE "research_items"."id" = 1 LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "research_items" SET "user_id" = ?, "updated_at" = ? WHERE "research_items"."id" = 1  [["user_id", 1], ["updated_at", Thu, 05 Sep 2013 15:06:18 UTC +00:00]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Completed 200 OK in 41ms (Views: 0.8ms | ActiveRecord: 0.8ms)
+  [1m[35m (0.6ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE "users"."email" = 'example@example.com' LIMIT 1[0m
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "users" ("created_at", "email", "encrypted_password", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", Thu, 05 Sep 2013 15:06:18 UTC +00:00], ["email", "example@example.com"], ["encrypted_password", "$2a$04$Qm5OO2kcfScC2AWcCftOTu2k0aYijhu.L3.u0vfBrr1Jn9IttRLDi"], ["updated_at", Thu, 05 Sep 2013 15:06:18 UTC +00:00]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "research_items" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", Thu, 05 Sep 2013 15:06:18 UTC +00:00], ["updated_at", Thu, 05 Sep 2013 15:06:18 UTC +00:00]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by ResearchItemsController#create as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mResearchItem Load (0.1ms)[0m  [1mSELECT "research_items".* FROM "research_items" WHERE "research_items"."id" = 1 LIMIT 1[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "research_items" SET "user_id" = ?, "updated_at" = ? WHERE "research_items"."id" = 1  [["user_id", 1], ["updated_at", Thu, 05 Sep 2013 15:06:18 UTC +00:00]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Completed 200 OK in 6ms (Views: 1.4ms | ActiveRecord: 0.5ms)
+  [1m[35m (0.5ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE "users"."email" = 'example@example.com' LIMIT 1[0m
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "users" ("created_at", "email", "encrypted_password", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", Thu, 05 Sep 2013 15:06:18 UTC +00:00], ["email", "example@example.com"], ["encrypted_password", "$2a$04$gIKpPuLxZglWvX/fBoshpeBpfW4EZAjcRPjHvQottT5aQNgdIjoWu"], ["updated_at", Thu, 05 Sep 2013 15:06:18 UTC +00:00]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "research_items" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", Thu, 05 Sep 2013 15:06:18 UTC +00:00], ["updated_at", Thu, 05 Sep 2013 15:06:18 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "research_items" WHERE "research_items"."user_id" = ?[0m  [["user_id", 1]]
+Processing by ResearchItemsController#create as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mResearchItem Load (0.1ms)[0m  SELECT "research_items".* FROM "research_items" WHERE "research_items"."id" = 1 LIMIT 1
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mUPDATE "research_items" SET "user_id" = ?, "updated_at" = ? WHERE "research_items"."id" = 1[0m  [["user_id", 1], ["updated_at", Thu, 05 Sep 2013 15:06:18 UTC +00:00]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Completed 200 OK in 6ms (Views: 1.1ms | ActiveRecord: 0.6ms)
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "research_items" WHERE "research_items"."user_id" = ?[0m  [["user_id", 1]]
+  [1m[35m (0.4ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE "users"."email" = 'example@example.com' LIMIT 1[0m
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "users" ("created_at", "email", "encrypted_password", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", Thu, 05 Sep 2013 15:06:18 UTC +00:00], ["email", "example@example.com"], ["encrypted_password", "$2a$04$gQ3h/.yGBo9qdrpNwIyemeRk..3287e0tyreCdAJWw.J5L0duCDtK"], ["updated_at", Thu, 05 Sep 2013 15:06:18 UTC +00:00]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "research_items" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", Thu, 05 Sep 2013 15:06:18 UTC +00:00], ["updated_at", Thu, 05 Sep 2013 15:06:18 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.5ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT 1 AS one FROM "users" WHERE "users"."email" = 'example@example.com' LIMIT 1
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[36mSQL (6.6ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "encrypted_password", "updated_at") VALUES (?, ?, ?, ?)[0m  [["created_at", Thu, 05 Sep 2013 15:06:21 UTC +00:00], ["email", "example@example.com"], ["encrypted_password", "$2a$04$G0TaugEpDsrdG5TVrxcvRu2cLaB9v2TAUo6B83MaMb3vcVrseslIe"], ["updated_at", Thu, 05 Sep 2013 15:06:21 UTC +00:00]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "research_items" ("created_at", "updated_at") VALUES (?, ?)  [["created_at", Thu, 05 Sep 2013 15:06:21 UTC +00:00], ["updated_at", Thu, 05 Sep 2013 15:06:21 UTC +00:00]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by ResearchItemsController#create as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mResearchItem Load (0.1ms)[0m  SELECT "research_items".* FROM "research_items" WHERE "research_items"."id" = 1 LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "research_items" SET "user_id" = ?, "updated_at" = ? WHERE "research_items"."id" = 1[0m  [["user_id", 1], ["updated_at", Thu, 05 Sep 2013 15:06:21 UTC +00:00]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  Rendered research_items/new.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 35ms (Views: 9.9ms | ActiveRecord: 0.9ms)
+  [1m[36m (2.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT 1 AS one FROM "users" WHERE "users"."email" = 'example@example.com' LIMIT 1
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "encrypted_password", "updated_at") VALUES (?, ?, ?, ?)[0m  [["created_at", Thu, 05 Sep 2013 15:06:21 UTC +00:00], ["email", "example@example.com"], ["encrypted_password", "$2a$04$h2Wx7HHROy57CNs8LxmWgeKL.tGqAiwD.aN5bBMTImsUdO.i4faQu"], ["updated_at", Thu, 05 Sep 2013 15:06:21 UTC +00:00]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "research_items" ("created_at", "updated_at") VALUES (?, ?)  [["created_at", Thu, 05 Sep 2013 15:06:21 UTC +00:00], ["updated_at", Thu, 05 Sep 2013 15:06:21 UTC +00:00]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.5ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE "users"."email" = 'example@example.com' LIMIT 1[0m
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "users" ("created_at", "email", "encrypted_password", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", Thu, 05 Sep 2013 15:06:21 UTC +00:00], ["email", "example@example.com"], ["encrypted_password", "$2a$04$L1nir/SwIQqnj2/fGxgbmOvJzVaTXvkQcN0JQwR3NPGfhwoUW3Xfy"], ["updated_at", Thu, 05 Sep 2013 15:06:21 UTC +00:00]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "research_items" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", Thu, 05 Sep 2013 15:06:21 UTC +00:00], ["updated_at", Thu, 05 Sep 2013 15:06:21 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.5ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT 1 AS one FROM "users" WHERE "users"."email" = 'example@example.com' LIMIT 1
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "encrypted_password", "updated_at") VALUES (?, ?, ?, ?)[0m  [["created_at", Thu, 05 Sep 2013 15:06:21 UTC +00:00], ["email", "example@example.com"], ["encrypted_password", "$2a$04$nocM.Vkp3f9fPXI03F/mKeexZoYLjrdlXHL6xBEXKxtIsFoI4qX6K"], ["updated_at", Thu, 05 Sep 2013 15:06:21 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "research_items" ("created_at", "updated_at") VALUES (?, ?)  [["created_at", Thu, 05 Sep 2013 15:06:21 UTC +00:00], ["updated_at", Thu, 05 Sep 2013 15:06:21 UTC +00:00]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "research_items" WHERE "research_items"."user_id" = ?  [["user_id", 1]]
+Processing by ResearchItemsController#create as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mResearchItem Load (0.1ms)[0m  [1mSELECT "research_items".* FROM "research_items" WHERE "research_items"."id" = 1 LIMIT 1[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "research_items" SET "user_id" = ?, "updated_at" = ? WHERE "research_items"."id" = 1  [["user_id", 1], ["updated_at", Thu, 05 Sep 2013 15:06:21 UTC +00:00]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Completed 200 OK in 6ms (Views: 0.9ms | ActiveRecord: 0.6ms)
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "research_items" WHERE "research_items"."user_id" = ?  [["user_id", 1]]
+  [1m[36m (0.4ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT 1 AS one FROM "users" WHERE "users"."email" = 'example@example.com' LIMIT 1
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "encrypted_password", "updated_at") VALUES (?, ?, ?, ?)[0m  [["created_at", Thu, 05 Sep 2013 15:06:21 UTC +00:00], ["email", "example@example.com"], ["encrypted_password", "$2a$04$gS4HeXHlExhQymgPuWEOGuiIrkLf9CPo51w6Dde9gAw1RD0fkxmmu"], ["updated_at", Thu, 05 Sep 2013 15:06:21 UTC +00:00]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "research_items" ("created_at", "updated_at") VALUES (?, ?)  [["created_at", Thu, 05 Sep 2013 15:06:21 UTC +00:00], ["updated_at", Thu, 05 Sep 2013 15:06:21 UTC +00:00]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by ResearchItemsController#create as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mResearchItem Load (0.1ms)[0m  SELECT "research_items".* FROM "research_items" WHERE "research_items"."id" = 1 LIMIT 1
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "research_items" SET "user_id" = ?, "updated_at" = ? WHERE "research_items"."id" = 1[0m  [["user_id", 1], ["updated_at", Thu, 05 Sep 2013 15:06:21 UTC +00:00]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Completed 200 OK in 6ms (Views: 0.9ms | ActiveRecord: 0.6ms)
+  [1m[36m (0.5ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT 1 AS one FROM "users" WHERE "users"."email" = 'example@example.com' LIMIT 1
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "encrypted_password", "updated_at") VALUES (?, ?, ?, ?)[0m  [["created_at", Thu, 05 Sep 2013 15:06:21 UTC +00:00], ["email", "example@example.com"], ["encrypted_password", "$2a$04$I59kJf6J1lohErEgL20tReAxe6Ti500fYHg72N5gjDTv7.RgEAqyS"], ["updated_at", Thu, 05 Sep 2013 15:06:21 UTC +00:00]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "research_items" WHERE "research_items"."user_id" = ?[0m  [["user_id", 1]]
+Processing by ResearchItemsController#create as HTML
+  Parameters: {"id"=>nil}
+Completed 200 OK in 1ms (Views: 1.0ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "research_items" WHERE "research_items"."user_id" = ?  [["user_id", 1]]
+  [1m[36m (0.4ms)[0m  [1mrollback transaction[0m

@@ -42,9 +42,28 @@ describe ResearchItemsController do
           expect(assigns(:research_item)).to eq @research_item
         end
 
+        it "adds the research_item to current_user" do
+          expect {
+            post :create, id: @research_item
+          }.to change(@current_user.research_items, :count).by(1)
+        end
+
       end
 
+      context 'does not find research_item by ID' do
 
+        before(:each) do
+          @research_item = ResearchItem.new(:id => 100)
+        end
+
+        it "looks for the id in BloombergResearch" do
+          pending "error is expects find_by_id 1 time received 0 times"
+          post :create, id: @research_item 
+          pp @research_item.id
+          BloombergResearch.should_receive(:find_by_id).with(@research_item.id)
+        end
+
+      end
 
     end
   
