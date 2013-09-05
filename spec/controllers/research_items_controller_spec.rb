@@ -85,6 +85,33 @@ describe ResearchItemsController do
             }.to change(ResearchItem, :count).by(1)
           end
 
+          it "adds new research_item to current_user" do
+            pending "undefined method 'params' for BloombergResearch object"
+            expect {
+              post :create, id: @research_item
+            }.to change(@current_user.research_items, :count).by(1)
+          end
+
+        end
+
+        context 'does not find bloomberg_research_item' do
+
+          before(:each) do
+            BloombergResearch.stub(:find_by_id).and_return(nil)
+          end
+
+          it "does not build a new ResearchItem" do
+            expect {
+              post :create, id: @research_item
+            }.to_not change(ResearchItem, :count)
+          end
+
+          it "does not add a new research_item to current_user" do
+            expect {
+              post :create, id: @research_item
+            }.to_not change(@current_user.research_items, :count)
+          end
+
         end
 
       end
