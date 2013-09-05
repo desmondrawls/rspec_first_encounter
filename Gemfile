@@ -6,7 +6,13 @@ gem 'rails', '4.0.0'
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3'
 
-gem 'rspec'
-gem 'rspec-rails'
-
 gem 'devise'
+
+group :development, :test do
+  gem 'rspec'
+  gem "rspec-rails"
+  gem "capybara", "~> 2.1.0"
+  gem "guard", "1.6.2"
+  gem "guard-rspec", "2.5.1"
+  gem "rb-fsevent", "~> 0.9.1"
+end
