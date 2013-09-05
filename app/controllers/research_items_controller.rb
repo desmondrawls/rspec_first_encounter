@@ -7,7 +7,7 @@ class ResearchItemsController < ApplicationController
 			@research_item = ResearchItem.find_by_id(@id)
 
 			unless @research_item.nil?
-				add_research_item_to_current_user(@research_item) unless current_user.has_research_item? @research_item.id
+				current_user.add_research_item_if_new(@research_item)
 			else
 				bloomberg_research_item = BloombergResearch.find_by_id(@id)
 
@@ -19,11 +19,4 @@ class ResearchItemsController < ApplicationController
 		render :new
 	end
 
-private
-	def add_research_item_to_current_user (research_item)
-		unless current_user.nil?
-			current_user.research_items << research_item
-			current_user.save!
-		end
-	end
 end

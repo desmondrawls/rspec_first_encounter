@@ -48,6 +48,12 @@ describe ResearchItemsController do
           }.to change(@current_user.research_items, :count).by(1)
         end
 
+        it "calls 'add_research_item_if_new on current_user" do
+          pending "error: expected 1 time received 0 times"
+          post :create, id: @research_item
+          @current_user.should_receive(:add_research_item_if_new).with(@research_item)
+        end
+
       end
 
       context 'does not find research_item by ID' do
@@ -57,7 +63,7 @@ describe ResearchItemsController do
         end
 
         it "looks for the id in BloombergResearch" do
-          pending "error is expects find_by_id 1 time received 0 times"
+          pending "error expected 1 time received 0 times"
           post :create, id: @research_item 
           pp @research_item.id
           BloombergResearch.should_receive(:find_by_id).with(@research_item.id)
