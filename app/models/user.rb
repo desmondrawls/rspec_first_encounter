@@ -10,6 +10,13 @@ class User < ActiveRecord::Base
     self.add_research_item(research_item) unless self.has_research_item? research_item.id
   end
 
+  def add_new_research_item_if_bloomberg_exists(id)
+    if bloomberg_research_item = BloombergResearch.find_by_id(id)
+      research_item = ResearchItem.new(bloomberg_research_item.params)
+      current_user.add_research_item (research_item)
+    end
+  end
+
   def add_research_item (research_item)
     self.research_items << research_item
     self.save!
@@ -18,4 +25,5 @@ class User < ActiveRecord::Base
   def has_research_item?(research_item)
     research_items.include?(research_item)
   end
+
 end

@@ -59,7 +59,7 @@ describe ResearchItemsController do
       context 'does not find research_item by ID' do
 
         before(:each) do
-          @research_item = ResearchItem.new(:id => 100)
+          @research_item = ResearchItem.new(:id => 0)
         end
 
         it "looks for the id in BloombergResearch" do
@@ -110,6 +110,12 @@ describe ResearchItemsController do
             expect {
               post :create, id: @research_item
             }.to_not change(@current_user.research_items, :count)
+          end
+
+          it "calls 'add_new_research_item_if_bloomberg_exists' on current_user" do
+            pending "error: expected 1 time received 0 times"
+            post :create, id: @research_item
+            @current_user.should_receive(:add_new_research_item_if_bloomberg_exists).with(@research_item.id)
           end
 
         end
