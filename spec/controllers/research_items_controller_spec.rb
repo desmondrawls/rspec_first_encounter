@@ -69,6 +69,24 @@ describe ResearchItemsController do
           BloombergResearch.should_receive(:find_by_id).with(@research_item.id)
         end
 
+        context 'finds bloomberg_research_item' do
+
+          before(:each) do
+            @bloomberg_research = BloombergResearch.create!
+            BloombergResearch.stub(:find_by_id).and_return(@bloomberg_research)
+          end
+
+          it "builds a new ResearchItem" do
+            pending "undefined method 'params' for BloombergResearch object"
+            pp @research_item
+            pp @bloomberg_research
+            expect {
+              post :create, id: @research_item
+            }.to change(ResearchItem, :count).by(1)
+          end
+
+        end
+
       end
 
     end
