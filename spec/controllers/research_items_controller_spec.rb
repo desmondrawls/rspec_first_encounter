@@ -18,6 +18,11 @@ describe ResearchItemsController do
         }.to_not change(@current_user.research_items, :count)
       end
 
+      it "renders the :new template" do
+        post :create, id: nil
+        expect(response).to render_template :new
+      end
+
     end
 
     context 'with ID' do
@@ -33,6 +38,11 @@ describe ResearchItemsController do
       it "assigns ID to @id" do
         post :create, id: @research_item
         expect(assigns(:id)).to eq @research_item.id.to_s
+      end
+
+      it "redirects to the current_user :show template" do
+        post :create, id: @research_item
+        expect(response).to redirect_to @current_user
       end
 
       context 'finds research_item by ID' do
