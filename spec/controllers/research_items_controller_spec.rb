@@ -1,10 +1,22 @@
 require 'spec_helper'
 require 'pp'
 
-describe "equals 1" do
+describe ResearchItemsController do
 
-  it "equals 1" do
-    expect(1).to eq 1
+  describe 'POST #show' do
+
+    context 'with ID' do
+
+      before(:each) do
+        @research_item = ResearchItem.create!
+      end
+
+      it "is a valid ResearchItem" do
+        expect(@research_item).to be_valid
+      end
+
+    end
+  
   end
    
 end
