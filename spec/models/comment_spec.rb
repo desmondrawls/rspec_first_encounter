@@ -4,20 +4,34 @@ require 'pp'
 describe Comment do
 
   before(:each) do
-    @idea = Idea.create!
+    @comment = Comment.create!
   end
 
-  context '@idea is not flagged' do
+  context '@comment is not flagged yet' do
 
     it "returns false when asked 'flagged?'" do
-      expect(@idea.flagged?).to eq false
+      expect(@comment.flagged?).to eq false
     end
 
     it "returns true when asked 'flagged?' after calling the 'flag_item!' method" do
-      @idea.flag_item!
-      expect(@idea.flagged?).to eq true
+      @comment.flag_item!
+      expect(@comment.flagged?).to eq true
     end
 
   end
+
+  context '@comment is already flagged' do
+
+    before(:each) do
+      @comment.flag_item!
+    end
+    
+    it "returns true when asked 'flagged?' after calling the 'flag_item!' method" do
+      @comment.flag_item!
+      expect(@comment.flagged?).to eq true
+    end
+
+  end
+
   
 end
