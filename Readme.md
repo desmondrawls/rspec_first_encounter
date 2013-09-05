@@ -1,26 +1,3 @@
-##Greetings Fellow Developer!
+Ok, I have most of the tests passing for the ResearchItem #create action. The only tests that I'm struggling with are the ones that check if a method is being called. I'll figure that out and get back to you.
 
-Thanks for your interest in SumZero and welcome to our Back-end Challenge! To kick off our interview process, we'd like you to solve a few problems to help us gauge your back-end experience.
-
-##A few notes to get you started.
-
-* The test is designed to take about an hour and a half. We will factor in the total time you take to complete the challenge into our evaluation, but we strongly prefer quality submissions over hasty and incomplete work.
-* The project environment already contains a working gemfile with rspec. All you need to do is run bundle install and you should be good to go.
-* Feel free to contact us if you need clarification, and you are free to use any online resources, but please do not collaborate or share your work with anyone else.
-* Your repo was forked from a private "Back-end Challenge" repo. Please create a pull request which merges your repo into the original with your name as the title in order to signify that you have finished.
-
-## Challenge 1: Refactor research_items_controller.rb#create
-You have been given legacy code without tests which you must clean up:
-
-1. Write controller tests to cover all paths through the create action. The ResearchedItem model is simple so all you need to do is call Model.create! to set up a model (no factories required). You may stub BloombergResearch.find_by_id().
-2. Refactor the action, pushing responsibilities into the model and/or any service classes you feel appropriate (you may create any additional classes as you deem necessary)
-3. Refactor your tests (commenting out those which are now irrelevant so we can see them) to match the new division of labor (creating new model/service test classes where appropriate)
-
-Your final set of tests should pass and the overall behavior of the create action should remain unchanged from its initial form.
-
-##Challenge 2: Design a Flag Module
-Imagine you need to allow users to flag three different kinds of items on SumZero (comments, ideas, and quick ideas). You want to develop a common module that is shared with each model to keep things DRY.
-
-1. Database Design. We've created a simple schema to get you started. You'll need to create a migration which embodies your design decisions, e.g., how will you record when an item has been flagged?
-2. Module logic. Create the necessary interface for the view layer to interact with your module. Hint: How will it tell what has been flagged and how will it flag items? You'll probably want a "flag_item!" method as well as a "flagged?" method. Feel free to add additional methods if you think they would be useful.
-3. Tests. Write tests for your module (if you didn't already in step 2).
+I wrote the 'flagged?' and 'flag_item!' methods along with their tests for the idea, quick_idea, and comment classes. I interpreted 'create the necessary interface for the view layer' to mean writing those methods and not building out any views.
