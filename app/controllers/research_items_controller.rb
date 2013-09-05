@@ -16,7 +16,7 @@ class ResearchItemsController < ApplicationController
 		end
 
 		#added for simplification purposes...
-		render :nothing => true
+		render :new
 	end
 
 private
