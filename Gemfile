@@ -7,7 +7,7 @@ gem 'rails', '4.0.0'
 gem 'sqlite3'
 
 gem 'devise'
-
+gem 'debugger'
 group :development, :test do
   gem 'rspec'
   gem "rspec-rails"

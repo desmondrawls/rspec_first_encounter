@@ -1,3 +1,3 @@
-Ok, I have most of the tests passing for the ResearchItem #create action. The only tests that I'm struggling with are the ones that check if a method is being called. I'll figure that out and get back to you.
+Archives Sept 5 2013 : my first encounter with rspec.
 
-I wrote the 'flagged?' and 'flag_item!' methods along with their tests for the idea, quick_idea, and comment classes. I interpreted 'create the necessary interface for the view layer' to mean writing those methods and not building out any views.
+I wrote this for a 2-hour technical challenge. I wrote the tests for and started to refactor the research items controller. I also wrote tests for the flaggable module and two short methods to satisfy those tests.
