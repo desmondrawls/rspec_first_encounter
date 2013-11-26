@@ -11,7 +11,6 @@ class User < ActiveRecord::Base
   end
 
   def add_new_research_item_if_bloomberg_exists(id)
-    debugger
     if bloomberg_research_item = BloombergResearch.find_by_id(id)
       research_item = ResearchItem.new(bloomberg_research_item.params)
       current_user.add_research_item(research_item)
